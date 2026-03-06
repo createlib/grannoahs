@@ -99,25 +99,25 @@
             class="h-10 w-auto mr-3 object-contain group-hover:scale-105 transition-transform duration-300"
             onerror="this.style.display='none';"
           />
-          <span class="text-xl font-extrabold tracking-tight text-slate-900 group-hover:gradient-text transition-all duration-300">GRAN NOAHS</span>
+          <span class="text-xl md:text-2xl font-extrabold tracking-tight text-slate-900 group-hover:gradient-text transition-all duration-300">GRAN NOAHS</span>
         </div>
 
         <!-- PCナビゲーション -->
-        <nav class="hidden md:flex space-x-10 items-center">
-          <button onclick="navigateTo('home')" data-nav-target="home" class="nav-link text-base font-bold transition-all hover:text-indigo-600 text-indigo-600">ホーム</button>
-          <button onclick="navigateTo('services')" data-nav-target="services" class="nav-link text-base font-bold transition-all hover:text-indigo-600 text-slate-600">事業内容</button>
-          <button onclick="navigateTo('ai-partner')" data-nav-target="ai-partner" class="nav-link text-base font-bold transition-all hover:text-indigo-600 flex items-center gap-1.5 text-slate-600">
-            <i data-lucide="sparkles" class="text-slate-400" style="width: 16px; height: 16px;"></i> 
+        <nav class="hidden md:flex space-x-8 xl:space-x-12 items-center">
+          <button onclick="navigateTo('home')" data-nav-target="home" class="nav-link text-base xl:text-lg font-bold transition-all hover:text-indigo-600 text-indigo-600">ホーム</button>
+          <button onclick="navigateTo('services')" data-nav-target="services" class="nav-link text-base xl:text-lg font-bold transition-all hover:text-indigo-600 text-slate-600">事業内容</button>
+          <button onclick="navigateTo('ai-partner')" data-nav-target="ai-partner" class="nav-link text-base xl:text-lg font-bold transition-all hover:text-indigo-600 flex items-center gap-1.5 text-slate-600">
+            <i data-lucide="sparkles" class="text-slate-400" style="width: 18px; height: 18px;"></i> 
             <span>AIデジタル相棒</span>
           </button>
-          <button onclick="navigateTo('about')" data-nav-target="about" class="nav-link text-base font-bold transition-all hover:text-indigo-600 text-slate-600">会社概要</button>
+          <button onclick="navigateTo('about')" data-nav-target="about" class="nav-link text-base xl:text-lg font-bold transition-all hover:text-indigo-600 text-slate-600">会社概要</button>
         </nav>
 
         <!-- お問い合わせボタン (PC) -->
         <div class="hidden md:block">
           <button 
             onclick="navigateTo('contact')" 
-            class="relative overflow-hidden group text-sm font-bold px-8 py-3.5 rounded-full bg-slate-900 text-white shadow-lg hover:shadow-indigo-500/30 transition-all duration-300"
+            class="relative overflow-hidden group text-base xl:text-lg font-bold px-8 py-3.5 rounded-full bg-slate-900 text-white shadow-lg hover:shadow-indigo-500/30 transition-all duration-300"
           >
             <span class="relative z-10">お問い合わせ</span>
             <div class="absolute inset-0 h-full w-full bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
@@ -127,7 +127,7 @@
         <!-- モバイルメニューボタン -->
         <div class="md:hidden flex items-center">
           <button onclick="toggleMobileMenu()" class="text-slate-900 p-2">
-            <i id="menu-icon" data-lucide="menu" style="width: 24px; height: 24px;"></i>
+            <i id="menu-icon" data-lucide="menu" style="width: 28px; height: 28px;"></i>
           </button>
         </div>
       </div>
@@ -136,16 +136,16 @@
     <!-- モバイルナビゲーション -->
     <div id="mobile-menu" class="md:hidden absolute top-[calc(100%+10px)] left-4 right-4 glass-card rounded-3xl transition-all duration-400 overflow-hidden origin-top scale-y-0 opacity-0">
       <div class="flex flex-col space-y-4 px-6 py-8">
-        <button onclick="navigateTo('home')" data-nav-target="home" class="nav-link text-sm font-bold transition-all hover:text-indigo-600 text-indigo-600 text-left">ホーム</button>
-        <button onclick="navigateTo('services')" data-nav-target="services" class="nav-link text-sm font-bold transition-all hover:text-indigo-600 text-slate-600 text-left">事業内容</button>
-        <button onclick="navigateTo('ai-partner')" data-nav-target="ai-partner" class="nav-link text-sm font-bold transition-all hover:text-indigo-600 flex items-center gap-1.5 text-slate-600 text-left">
-          <i data-lucide="sparkles" class="text-slate-400" style="width: 14px; height: 14px;"></i> 
+        <button onclick="navigateTo('home')" data-nav-target="home" class="nav-link text-lg font-bold transition-all hover:text-indigo-600 text-indigo-600 text-left">ホーム</button>
+        <button onclick="navigateTo('services')" data-nav-target="services" class="nav-link text-lg font-bold transition-all hover:text-indigo-600 text-slate-600 text-left">事業内容</button>
+        <button onclick="navigateTo('ai-partner')" data-nav-target="ai-partner" class="nav-link text-lg font-bold transition-all hover:text-indigo-600 flex items-center gap-1.5 text-slate-600 text-left">
+          <i data-lucide="sparkles" class="text-slate-400" style="width: 18px; height: 18px;"></i> 
           <span>AIデジタル相棒</span>
         </button>
-        <button onclick="navigateTo('about')" data-nav-target="about" class="nav-link text-sm font-bold transition-all hover:text-indigo-600 text-slate-600 text-left">会社概要</button>
+        <button onclick="navigateTo('about')" data-nav-target="about" class="nav-link text-lg font-bold transition-all hover:text-indigo-600 text-slate-600 text-left">会社概要</button>
         
         <div class="pt-6 mt-2 border-t border-slate-200/50">
-          <button onclick="navigateTo('contact')" class="w-full text-center text-sm font-bold px-6 py-4 rounded-xl bg-gradient-to-r from-indigo-500 to-pink-500 text-white shadow-md">
+          <button onclick="navigateTo('contact')" class="w-full text-center text-lg font-bold px-6 py-4 rounded-xl bg-gradient-to-r from-indigo-500 to-pink-500 text-white shadow-md">
             お問い合わせ
           </button>
         </div>
@@ -164,39 +164,39 @@
       <section class="relative pt-24 pb-40 xl:pb-48">
         <div class="w-[92%] xl:w-[88%] max-w-[1920px] mx-auto text-center relative z-10 flex flex-col items-center">
           
-          <div class="glass-card inline-flex items-center gap-2 px-5 py-2.5 rounded-full text-sm font-bold text-slate-700 mb-12 hover:scale-105 transition-transform cursor-default">
-            <span class="flex h-2.5 w-2.5 relative">
+          <div class="glass-card inline-flex items-center gap-2 px-6 py-3 rounded-full text-base xl:text-lg font-bold text-slate-700 mb-12 hover:scale-105 transition-transform cursor-default">
+            <span class="flex h-3 w-3 relative">
               <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-pink-400 opacity-75"></span>
-              <span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-pink-500"></span>
+              <span class="relative inline-flex rounded-full h-3 w-3 bg-pink-500"></span>
             </span>
             Next Generation Social Innovation
           </div>
           
           <!-- テキストを巨大化し、PC画面に合わせる -->
-          <h1 class="text-5xl md:text-7xl lg:text-[6.5rem] xl:text-[7.5rem] font-extrabold tracking-tight text-slate-900 mb-10 leading-[1.05]">
+          <h1 class="text-5xl md:text-7xl lg:text-[6.5rem] xl:text-[8rem] font-extrabold tracking-tight text-slate-900 mb-10 leading-[1.1]">
             AIと人の行動データで、<br />
             <span class="gradient-text drop-shadow-sm">新しい社会</span>の形を創る。
           </h1>
           
-          <p class="text-xl md:text-2xl xl:text-3xl text-slate-600 mb-16 max-w-4xl mx-auto leading-relaxed font-medium">
-            行動経済学とデータサイエンスの力で、地方創生から組織課題まで。
-            本質的な解決策と<strong class="text-indigo-600">「デジタルな相棒」</strong>を提供します。
+          <p class="text-xl md:text-2xl xl:text-3xl text-slate-600 mb-16 max-w-5xl mx-auto leading-relaxed font-medium">
+            行動経済学の深い知見と最先端のデータサイエンスを融合し、地方創生から企業の組織課題まで、表面的な対処にとどまらない本質的な解決策を導き出します。<br class="hidden lg:block"/>
+            私たちが提供するのは、あなたと共に考え、共に成長する<strong class="text-indigo-600">「デジタルな相棒」</strong>です。
           </p>
           
           <div class="flex flex-col sm:flex-row items-center justify-center gap-6 w-full sm:w-auto">
             <button 
               onclick="navigateTo('ai-partner')"
-              class="w-full sm:w-auto px-10 py-5 rounded-full bg-slate-900 text-white font-bold text-lg shadow-[0_10px_30px_rgba(0,0,0,0.15)] hover:shadow-[0_15px_40px_rgba(79,70,229,0.3)] transition-all duration-300 transform hover:-translate-y-1 flex items-center justify-center group overflow-hidden relative"
+              class="w-full sm:w-auto px-12 py-6 rounded-full bg-slate-900 text-white font-bold text-xl shadow-[0_10px_30px_rgba(0,0,0,0.15)] hover:shadow-[0_15px_40px_rgba(79,70,229,0.3)] transition-all duration-300 transform hover:-translate-y-1 flex items-center justify-center group overflow-hidden relative"
             >
               <div class="absolute inset-0 h-full w-full bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
               <span class="relative z-10 flex items-center">
                 AIデジタル相棒を見る
-                <i data-lucide="arrow-right" class="ml-2 group-hover:translate-x-1 transition-transform" style="width: 20px; height: 20px;"></i>
+                <i data-lucide="arrow-right" class="ml-3 group-hover:translate-x-2 transition-transform" style="width: 24px; height: 24px;"></i>
               </span>
             </button>
             <button 
               onclick="navigateTo('services')"
-              class="w-full sm:w-auto px-10 py-5 rounded-full glass-card text-slate-900 font-bold text-lg hover:bg-white/80 transition-all duration-300 flex items-center justify-center transform hover:-translate-y-1"
+              class="w-full sm:w-auto px-12 py-6 rounded-full glass-card text-slate-900 font-bold text-xl hover:bg-white/80 transition-all duration-300 flex items-center justify-center transform hover:-translate-y-1"
             >
               全事業内容を見る
             </button>
@@ -209,12 +209,12 @@
         <div class="w-[92%] xl:w-[88%] max-w-[1920px] mx-auto">
           <div class="mb-20 flex flex-col md:flex-row md:items-end justify-between gap-6">
             <div>
-              <h2 class="text-4xl md:text-6xl font-extrabold tracking-tight text-slate-900 mb-6">Our Businesses</h2>
-              <p class="text-slate-600 text-xl max-w-2xl font-medium">4つの事業領域で、人と社会の新しいつながりをデザインします。</p>
+              <h2 class="text-4xl md:text-6xl xl:text-7xl font-extrabold tracking-tight text-slate-900 mb-6">Our Businesses</h2>
+              <p class="text-slate-600 text-xl xl:text-2xl max-w-3xl font-medium leading-relaxed">社会のアップデートに挑戦する4つの事業領域。テクノロジーとアナログの良さを融合させ、人と社会の新しいつながりをデザインします。</p>
             </div>
           </div>
 
-          <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+          <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 xl:gap-10">
             <!-- 1. AI事業 -->
             <div 
               onclick="navigateTo('ai-partner')"
@@ -223,18 +223,18 @@
               <div class="absolute inset-0 bg-white/60 backdrop-blur-xl border border-white/80 z-0"></div>
               <div class="absolute right-0 bottom-0 w-[150%] h-[150%] bg-gradient-to-tl from-indigo-100 via-purple-50/50 to-transparent opacity-80 z-0 transform translate-x-1/4 translate-y-1/4 rounded-full group-hover:scale-110 transition-transform duration-700"></div>
               
-              <div class="relative z-10 max-w-xl">
+              <div class="relative z-10 max-w-2xl">
                 <div class="w-20 h-20 rounded-[2rem] bg-gradient-to-br from-indigo-500 to-purple-600 flex items-center justify-center mb-10 shadow-lg shadow-indigo-500/30 group-hover:rotate-12 transition-transform duration-500">
                   <i data-lucide="bot" class="text-white" style="width: 40px; height: 40px;"></i>
                 </div>
-                <h3 class="text-4xl md:text-5xl font-extrabold text-slate-900 mb-6 tracking-tight group-hover:gradient-text transition-all duration-300 leading-tight">
+                <h3 class="text-4xl md:text-5xl xl:text-6xl font-extrabold text-slate-900 mb-6 tracking-tight group-hover:gradient-text transition-all duration-300 leading-tight">
                   AIデータを活用した<br/>社会貢献事業
                 </h3>
-                <p class="text-slate-600 text-xl leading-relaxed mb-10 font-medium">
-                  人格DNAと環境DNAを用いたシミュレーションで、あなた専属の「デジタル相棒」を構築。スケジュール調整や日記の報告など、次世代のサポートを提供します。
+                <p class="text-slate-600 text-xl xl:text-2xl leading-relaxed mb-10 font-medium">
+                  個人の特性や価値観を「人格DNA」として、周囲の状況や組織文化を「環境DNA」として精緻にモデル化。この2つを掛け合わせた高度なシミュレーション技術により、あなた専属の「デジタル相棒」を構築します。煩雑なスケジュール調整から、他者の相棒との自律的なコミュニケーションまで、次世代のサポート体験を提供します。
                 </p>
-                <div class="inline-flex items-center font-bold text-lg text-indigo-600 bg-indigo-50/50 px-6 py-3 rounded-full border border-indigo-100">
-                  詳細を見る <i data-lucide="arrow-up-right" class="ml-2 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" style="width: 20px; height: 20px;"></i>
+                <div class="inline-flex items-center font-bold text-xl text-indigo-600 bg-indigo-50/50 px-8 py-4 rounded-full border border-indigo-100 transition-colors group-hover:bg-indigo-100">
+                  詳細を見る <i data-lucide="arrow-up-right" class="ml-2 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" style="width: 24px; height: 24px;"></i>
                 </div>
               </div>
               
@@ -248,15 +248,15 @@
             >
               <div class="absolute top-0 right-0 w-40 h-40 bg-emerald-400/10 rounded-full blur-2xl z-0 group-hover:scale-150 transition-transform duration-500"></div>
               <div class="relative z-10 flex flex-col h-full">
-                <div class="w-16 h-16 rounded-[1.5rem] bg-white border border-slate-100 shadow-sm flex items-center justify-center mb-8 group-hover:-translate-y-2 transition-transform duration-300">
-                  <i data-lucide="leaf" class="text-emerald-500" style="width: 32px; height: 32px;"></i>
+                <div class="w-20 h-20 rounded-[2rem] bg-white border border-slate-100 shadow-sm flex items-center justify-center mb-8 group-hover:-translate-y-2 transition-transform duration-300">
+                  <i data-lucide="leaf" class="text-emerald-500" style="width: 40px; height: 40px;"></i>
                 </div>
-                <h3 class="text-3xl font-extrabold text-slate-900 mb-5 tracking-tight">地方創生事業</h3>
-                <p class="text-slate-600 text-lg leading-relaxed mb-8 flex-grow font-medium">
-                  古民家などの地域資源を活用した施設設計と、独自のシステム開発。地方に新たな雇用と人の流れを創り出します。
+                <h3 class="text-3xl xl:text-4xl font-extrabold text-slate-900 mb-6 tracking-tight">地方創生事業</h3>
+                <p class="text-slate-600 text-xl leading-relaxed mb-8 flex-grow font-medium">
+                  日本各地に眠る「古民家」などの価値ある地域資源を、現代のライフスタイルに合わせたサービス施設へと再生。単なる空間設計にとどまらず、施設運営を効率化する独自のシステム開発までを一貫して提供し、地方に新たな人の流れを創り出します。
                 </p>
-                <div class="mt-auto inline-flex items-center text-base font-bold text-slate-500 group-hover:text-emerald-600 transition-colors">
-                  詳しく <i data-lucide="arrow-right" class="ml-1 group-hover:translate-x-1 transition-transform" style="width: 18px; height: 18px;"></i>
+                <div class="mt-auto inline-flex items-center text-lg font-bold text-slate-500 group-hover:text-emerald-600 transition-colors">
+                  詳しく <i data-lucide="arrow-right" class="ml-2 group-hover:translate-x-1 transition-transform" style="width: 20px; height: 20px;"></i>
                 </div>
               </div>
             </div>
@@ -264,19 +264,19 @@
             <!-- 3. コミュニティ -->
             <div 
               onclick="window.open('https://noonealonehere.pages.dev/', '_blank', 'noopener,noreferrer')"
-              class="group glass-card rounded-[3rem] p-12 lg:p-16 hover-lift cursor-pointer flex flex-col min-h-[400px] relative overflow-hidden"
+              class="group glass-card rounded-[3rem] p-12 lg:p-16 hover-lift cursor-pointer flex flex-col min-h-[500px] relative overflow-hidden"
             >
               <div class="absolute top-0 right-0 w-40 h-40 bg-orange-400/10 rounded-full blur-2xl z-0 group-hover:scale-150 transition-transform duration-500"></div>
               <div class="relative z-10 flex flex-col h-full">
-                <div class="w-16 h-16 rounded-[1.5rem] bg-white border border-slate-100 shadow-sm flex items-center justify-center mb-8 group-hover:-translate-y-2 transition-transform duration-300">
-                  <i data-lucide="users" class="text-orange-500" style="width: 32px; height: 32px;"></i>
+                <div class="w-20 h-20 rounded-[2rem] bg-white border border-slate-100 shadow-sm flex items-center justify-center mb-8 group-hover:-translate-y-2 transition-transform duration-300">
+                  <i data-lucide="users" class="text-orange-500" style="width: 40px; height: 40px;"></i>
                 </div>
-                <h3 class="text-3xl font-extrabold text-slate-900 mb-5 tracking-tight">NOAHコミュニティ</h3>
-                <p class="text-slate-600 text-lg leading-relaxed mb-8 flex-grow font-medium">
-                  「No One Alone Here」— 多様な人材が集う実践的なコミュニティ。参加者の自己実現を後押しする心理的安全性のある場を提供しています。
+                <h3 class="text-3xl xl:text-4xl font-extrabold text-slate-900 mb-6 tracking-tight">NOAHコミュニティ</h3>
+                <p class="text-slate-600 text-xl leading-relaxed mb-8 flex-grow font-medium">
+                  「誰も一人にしない（No One Alone Here）」という強い信念のもと、多様なバックグラウンドを持つ人々が集う実践的なコミュニティを運営。オンラインのつながりとオフラインの熱狂を掛け合わせ、参加者の自己実現を強力に後押しします。
                 </p>
-                <div class="mt-auto inline-flex items-center text-base font-bold text-orange-600 group-hover:text-orange-700 transition-colors">
-                  公式サイトへ <i data-lucide="arrow-up-right" class="ml-1 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" style="width: 18px; height: 18px;"></i>
+                <div class="mt-auto inline-flex items-center text-lg font-bold text-orange-600 group-hover:text-orange-700 transition-colors">
+                  公式サイトへ <i data-lucide="arrow-up-right" class="ml-2 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" style="width: 20px; height: 20px;"></i>
                 </div>
               </div>
             </div>
@@ -284,21 +284,21 @@
             <!-- 4. SaaaS -->
             <div 
               onclick="navigateTo('services')"
-              class="lg:col-span-2 group glass-card-dark rounded-[3rem] p-12 lg:p-16 hover-lift cursor-pointer flex flex-col md:flex-row items-start md:items-center justify-between gap-10 min-h-[400px] overflow-hidden relative"
+              class="lg:col-span-2 group glass-card-dark rounded-[3rem] p-12 lg:p-16 hover-lift cursor-pointer flex flex-col md:flex-row items-start md:items-center justify-between gap-10 min-h-[450px] overflow-hidden relative"
             >
               <div class="absolute -left-20 -bottom-20 w-80 h-80 bg-indigo-600/30 rounded-full blur-3xl z-0 group-hover:scale-150 transition-transform duration-700"></div>
-              <div class="relative z-10 max-w-2xl">
-                <div class="w-16 h-16 rounded-[1.5rem] bg-white/10 border border-white/20 backdrop-blur-md flex items-center justify-center mb-8 group-hover:scale-110 transition-transform duration-300">
-                  <i data-lucide="monitor-check" class="text-indigo-300" style="width: 32px; height: 32px;"></i>
+              <div class="relative z-10 max-w-3xl">
+                <div class="w-20 h-20 rounded-[2rem] bg-white/10 border border-white/20 backdrop-blur-md flex items-center justify-center mb-8 group-hover:scale-110 transition-transform duration-300">
+                  <i data-lucide="monitor-check" class="text-indigo-300" style="width: 40px; height: 40px;"></i>
                 </div>
-                <h3 class="text-3xl md:text-4xl font-extrabold text-white mb-5 tracking-tight">SaaaS事業</h3>
-                <p class="text-slate-300 leading-relaxed text-xl font-medium">
-                  企業や個人の煩雑なバックオフィス業務をデジタル技術で効率化。コア業務への集中をサポートします。
+                <h3 class="text-4xl md:text-5xl font-extrabold text-white mb-6 tracking-tight">SaaaS事業</h3>
+                <p class="text-slate-300 leading-relaxed text-xl xl:text-2xl font-medium">
+                  企業や個人事業主が抱える煩雑で時間のかかるバックオフィス業務。私たちは最新のデジタル技術と最適化されたオペレーション設計によってこれを徹底的に効率化し、本来注力すべきコア業務に集中できる圧倒的に身軽な環境を構築します。
                 </p>
               </div>
               <div class="relative z-10 w-full md:w-auto mt-6 md:mt-0 flex justify-end">
-                 <div class="inline-flex items-center justify-center w-20 h-20 rounded-full bg-white text-slate-900 group-hover:bg-indigo-500 group-hover:text-white transition-colors duration-300 shadow-xl">
-                   <i data-lucide="arrow-up-right" class="group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" style="width: 32px; height: 32px;"></i>
+                 <div class="inline-flex items-center justify-center w-24 h-24 rounded-full bg-white text-slate-900 group-hover:bg-indigo-500 group-hover:text-white transition-colors duration-300 shadow-xl">
+                   <i data-lucide="arrow-up-right" class="group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" style="width: 40px; height: 40px;"></i>
                  </div>
               </div>
             </div>
@@ -312,15 +312,15 @@
     <!-- ============================================== -->
     <div id="page-ai-partner" class="page-content">
       <div class="pt-32 pb-24 text-center px-6 relative">
-        <div class="inline-flex items-center justify-center w-24 h-24 rounded-[2rem] bg-gradient-to-br from-indigo-500 to-pink-500 shadow-2xl shadow-pink-500/20 mb-10 transform hover:rotate-12 transition-transform duration-500">
-          <i data-lucide="bot" class="text-white" style="width: 48px; height: 48px;"></i>
+        <div class="inline-flex items-center justify-center w-28 h-28 rounded-[2rem] bg-gradient-to-br from-indigo-500 to-pink-500 shadow-2xl shadow-pink-500/20 mb-10 transform hover:rotate-12 transition-transform duration-500">
+          <i data-lucide="bot" class="text-white" style="width: 56px; height: 56px;"></i>
         </div>
-        <h1 class="text-5xl md:text-7xl lg:text-[6rem] font-extrabold tracking-tighter text-slate-900 mb-8 leading-tight">
+        <h1 class="text-5xl md:text-7xl lg:text-[7rem] font-extrabold tracking-tighter text-slate-900 mb-10 leading-tight">
           あなただけの、<br class="md:hidden" />進化する<span class="gradient-text">「デジタル相棒」</span>
         </h1>
-        <p class="text-2xl text-slate-600 max-w-3xl mx-auto font-medium leading-relaxed">
+        <p class="text-2xl xl:text-3xl text-slate-600 max-w-4xl mx-auto font-medium leading-relaxed">
           人格DNAと環境DNAの高度なシミュレーションが、<br class="hidden md:block"/>
-          単なるAIを超えた、頼れる相棒を生み出します。
+          単なる便利なAIツールという枠組みを超えた、あなたと共に考え成長する頼れるパートナーを生み出します。
         </p>
       </div>
 
@@ -330,24 +330,24 @@
           <div class="absolute top-[-20%] right-[-10%] w-[50%] h-[100%] bg-gradient-to-l from-indigo-200/50 to-transparent blur-3xl z-0 transform group-hover:scale-110 transition-transform duration-1000"></div>
           
           <div class="w-full lg:w-1/2 order-2 lg:order-1 relative z-10">
-            <div class="inline-flex items-center gap-3 px-5 py-2 rounded-full bg-indigo-100 text-indigo-700 text-base font-bold mb-8">
-              <i data-lucide="fingerprint" style="width: 20px; height: 20px;"></i> Core Technology
+            <div class="inline-flex items-center gap-3 px-6 py-3 rounded-full bg-indigo-100 text-indigo-700 text-lg font-bold mb-8">
+              <i data-lucide="fingerprint" style="width: 24px; height: 24px;"></i> Core Technology
             </div>
-            <h2 class="text-4xl lg:text-5xl font-extrabold text-slate-900 mb-8 tracking-tight leading-tight">「人格DNA」と「環境DNA」</h2>
-            <p class="text-slate-600 text-xl leading-relaxed mb-8 font-medium">
-              ユーザー個人の特性や価値観を構成する<strong>「人格DNA」</strong>と、周囲の状況や組織文化を表す<strong>「環境DNA」</strong>を精緻に構築します。
+            <h2 class="text-4xl lg:text-6xl font-extrabold text-slate-900 mb-8 tracking-tight leading-tight">「人格DNA」と<br/>「環境DNA」の構築</h2>
+            <p class="text-slate-600 text-xl xl:text-2xl leading-relaxed mb-8 font-medium">
+              私たちが提供するデジタル相棒の根幹となるのは、緻密なデータモデルです。ユーザー個人の深層にある特性や価値観、行動原理を構成する<strong>「人格DNA」</strong>と、その人が身を置く周囲の状況や組織文化を表す<strong>「環境DNA」</strong>を精緻に構築・データ化します。
             </p>
-            <p class="text-slate-600 text-xl leading-relaxed font-medium">
-              これらを掛け合わせることで、特定の環境下で人格アバターがどう考え、どう行動するかを高精度にシミュレーション。採用時のミスマッチを防ぎ、最適なコミュニケーションの土台を作ります。
+            <p class="text-slate-600 text-xl xl:text-2xl leading-relaxed font-medium">
+              これら２つのDNAデータを掛け合わせることで、特定の環境下において人格アバターが「どのように考え、どう行動するのか」を極めて高い精度でシミュレーションします。この技術により、採用時の致命的なミスマッチを防ぐだけでなく、組織内での最適なコミュニケーションの土台を作り上げることが可能になります。
             </p>
           </div>
           
           <div class="w-full lg:w-1/2 order-1 lg:order-2 flex justify-center relative z-10">
             <div class="w-full max-w-2xl aspect-square rounded-[3rem] bg-white border border-white/50 shadow-[0_20px_50px_rgba(0,0,0,0.05)] flex flex-col items-center justify-center p-10 text-center relative overflow-hidden group-hover:shadow-[0_40px_80px_rgba(79,70,229,0.15)] transition-shadow duration-500">
                <div class="absolute inset-0 bg-gradient-to-br from-indigo-50 to-pink-50 opacity-50"></div>
-               <div class="relative z-10 w-48 h-48 rounded-full bg-gradient-to-tr from-indigo-200 to-pink-200 blur-2xl animate-pulse flex items-center justify-center"></div>
-               <i data-lucide="fingerprint" class="text-indigo-500 absolute z-20 drop-shadow-xl" stroke-width="1" style="width: 120px; height: 120px;"></i>
-               <span class="text-base font-bold text-slate-400 absolute bottom-12 z-20 bg-white/80 px-6 py-3 rounded-full backdrop-blur-sm shadow-sm">[ Data Simulation ]</span>
+               <div class="relative z-10 w-64 h-64 rounded-full bg-gradient-to-tr from-indigo-200 to-pink-200 blur-2xl animate-pulse flex items-center justify-center"></div>
+               <i data-lucide="fingerprint" class="text-indigo-500 absolute z-20 drop-shadow-xl" stroke-width="1" style="width: 160px; height: 160px;"></i>
+               <span class="text-lg font-bold text-slate-400 absolute bottom-12 z-20 bg-white/80 px-8 py-4 rounded-full backdrop-blur-sm shadow-sm">[ Simulation Engine Active ]</span>
             </div>
           </div>
         </div>
@@ -360,23 +360,23 @@
             <div class="w-full max-w-2xl aspect-square rounded-[4rem] bg-gradient-to-br from-purple-500 to-indigo-600 p-1.5 shadow-[0_30px_60px_rgba(99,102,241,0.25)] hover:scale-105 transition-transform duration-500">
               <div class="w-full h-full bg-slate-900 rounded-[3.8rem] flex flex-col items-center justify-center p-12 text-center relative overflow-hidden">
                  <div class="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAiIGhlaWdodD0iMjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGNpcmNsZSBjeD0iMiIgY3k9IjIiIHI9IjEiIGZpbGw9IiNmZmYiIG9wYWNpdHk9IjAuMDUiLz48L3N2Zz4=')]"></div>
-                 <i data-lucide="message-square-share" class="text-purple-400 mb-10 drop-shadow-[0_0_20px_rgba(168,85,247,0.6)] animate-bounce" stroke-width="1" style="width: 120px; height: 120px; animation-duration: 3s;"></i>
-                 <span class="text-base font-bold text-white/70 bg-white/10 px-6 py-3 rounded-full backdrop-blur-md border border-white/10">[ Network Interaction ]</span>
+                 <i data-lucide="message-square-share" class="text-purple-400 mb-10 drop-shadow-[0_0_20px_rgba(168,85,247,0.6)] animate-bounce" stroke-width="1" style="width: 140px; height: 140px; animation-duration: 3s;"></i>
+                 <span class="text-lg font-bold text-white/70 bg-white/10 px-8 py-4 rounded-full backdrop-blur-md border border-white/10">[ Partner-to-Partner Network ]</span>
               </div>
             </div>
           </div>
           <div class="w-full lg:w-1/2">
-            <h2 class="text-4xl lg:text-5xl font-extrabold text-slate-900 mb-8 tracking-tight leading-tight">対話、そして他者の相棒へ</h2>
-            <p class="text-slate-600 text-xl leading-relaxed mb-8 font-medium">
-              構築されたAIは、何でも話せる「相棒」として日常的に対話できます。
+            <h2 class="text-4xl lg:text-6xl font-extrabold text-slate-900 mb-10 tracking-tight leading-tight">心を通わせる対話、<br/>そして他者の相棒へ</h2>
+            <p class="text-slate-600 text-xl xl:text-2xl leading-relaxed mb-10 font-medium">
+              構築されたAIは、ユーザーにとって専属のコンシェルジュであり、日々の悩みや業務の壁を何でも相談できる「相棒」として日常的に対話を行うことができます。
             </p>
-            <div class="bg-indigo-50/50 backdrop-blur-md border border-indigo-100/50 rounded-3xl p-8 my-10 shadow-sm transform hover:-translate-y-2 transition-transform">
-              <p class="text-slate-800 text-2xl font-bold leading-relaxed">
-                画期的なのは、<span class="text-indigo-600">自分以外の「誰かの相棒」とも会話ができる</span>点です。
+            <div class="bg-indigo-50/50 backdrop-blur-md border border-indigo-100/50 rounded-3xl p-10 my-10 shadow-sm transform hover:-translate-y-2 transition-transform">
+              <p class="text-slate-800 text-2xl xl:text-3xl font-bold leading-relaxed">
+                最も画期的なポイントは、<br/><span class="text-indigo-600 text-3xl xl:text-4xl mt-2 block">自分以外の「誰かの相棒」とも直接会話ができる</span>という点です。
               </p>
             </div>
-            <p class="text-slate-600 text-xl leading-relaxed font-medium">
-              直接言いづらいことのニュアンスを探ったり、趣味の合う人を探すための事前コミュニケーションなど、AIを介した新しい人間関係の構築をサポートします。
+            <p class="text-slate-600 text-xl xl:text-2xl leading-relaxed font-medium">
+              例えば、本人には直接言いづらい要望のニュアンスを相棒経由で柔らかく伝えたり、新しいプロジェクトに向けて趣味や価値観の合う人を相棒同士の事前コミュニケーションで探すなど、AIを介して摩擦の少ない新しい人間関係の構築を強力にサポートします。
             </p>
           </div>
         </div>
@@ -387,30 +387,30 @@
         <div class="absolute inset-0 bg-white/40 backdrop-blur-3xl border-y border-white/50 z-0"></div>
         <div class="w-[92%] xl:w-[88%] max-w-[1920px] mx-auto relative z-10">
           <div class="text-center mb-24">
-            <h2 class="text-4xl md:text-6xl font-extrabold text-slate-900 mb-8 tracking-tight">自律的なアクション</h2>
-            <p class="text-slate-600 text-2xl font-medium max-w-3xl mx-auto">相棒はバックグラウンドで働き、あなたの日常をスマートにサポートします。</p>
+            <h2 class="text-4xl md:text-6xl lg:text-7xl font-extrabold text-slate-900 mb-8 tracking-tight">驚くほど自律的なアクション</h2>
+            <p class="text-slate-600 text-2xl xl:text-3xl font-medium max-w-4xl mx-auto leading-relaxed">相棒はただ待っているだけではありません。あなたの日常をスマートにサポートするため、バックグラウンドで能動的に働き続けます。</p>
           </div>
 
-          <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
-            <div class="glass-card rounded-[3.5rem] p-12 lg:p-16 hover-lift relative overflow-hidden group min-h-[450px]">
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-12 xl:gap-16">
+            <div class="glass-card rounded-[3.5rem] p-12 lg:p-20 hover-lift relative overflow-hidden group min-h-[500px]">
               <div class="absolute top-0 right-0 w-64 h-64 bg-pink-300/20 rounded-full blur-3xl group-hover:bg-pink-400/30 transition-colors duration-500"></div>
-              <div class="w-20 h-20 rounded-[2rem] bg-gradient-to-br from-pink-400 to-rose-500 flex items-center justify-center mb-10 shadow-xl shadow-pink-500/30 group-hover:scale-110 transition-transform">
-                <i data-lucide="calendar-sync" class="text-white" style="width: 40px; height: 40px;"></i>
+              <div class="w-24 h-24 rounded-[2rem] bg-gradient-to-br from-pink-400 to-rose-500 flex items-center justify-center mb-10 shadow-xl shadow-pink-500/30 group-hover:scale-110 transition-transform">
+                <i data-lucide="calendar-sync" class="text-white" style="width: 48px; height: 48px;"></i>
               </div>
-              <h3 class="text-3xl font-extrabold text-slate-900 mb-6">スケジュール調整と依頼</h3>
-              <p class="text-slate-600 leading-relaxed text-xl font-medium">
-                相棒同士が連携し、面倒な日程調整や業務の依頼・すり合わせをユーザーの代わりに行ってくれます。
+              <h3 class="text-4xl font-extrabold text-slate-900 mb-8">面倒な調整と依頼を代行</h3>
+              <p class="text-slate-600 leading-relaxed text-xl xl:text-2xl font-medium">
+                「Aさんとの打ち合わせを来週で組んで」と伝えるだけで、あとはあなたの相棒とAさんの相棒がバックグラウンドで会話・連携。お互いの予定を考慮した面倒な日程調整や、業務の事前すり合わせを、ユーザーの手を煩わせることなく自律的に行ってくれます。
               </p>
             </div>
 
-            <div class="glass-card rounded-[3.5rem] p-12 lg:p-16 hover-lift relative overflow-hidden group min-h-[450px]">
+            <div class="glass-card rounded-[3.5rem] p-12 lg:p-20 hover-lift relative overflow-hidden group min-h-[500px]">
                <div class="absolute top-0 right-0 w-64 h-64 bg-purple-300/20 rounded-full blur-3xl group-hover:bg-purple-400/30 transition-colors duration-500"></div>
-              <div class="w-20 h-20 rounded-[2rem] bg-gradient-to-br from-purple-400 to-indigo-500 flex items-center justify-center mb-10 shadow-xl shadow-purple-500/30 group-hover:scale-110 transition-transform">
-                <i data-lucide="book-text" class="text-white" style="width: 40px; height: 40px;"></i>
+              <div class="w-24 h-24 rounded-[2rem] bg-gradient-to-br from-purple-400 to-indigo-500 flex items-center justify-center mb-10 shadow-xl shadow-purple-500/30 group-hover:scale-110 transition-transform">
+                <i data-lucide="book-text" class="text-white" style="width: 48px; height: 48px;"></i>
               </div>
-              <h3 class="text-3xl font-extrabold text-slate-900 mb-6">日記での報告と承認プロセス</h3>
-              <p class="text-slate-600 leading-relaxed text-xl font-medium">
-                他の相棒と話して決まったことは、毎日の「日記」として報告。重要な決定事項はきちんと「承認」をもらいに来ます。
+              <h3 class="text-4xl font-extrabold text-slate-900 mb-8">日々のレポートと確実な承認</h3>
+              <p class="text-slate-600 leading-relaxed text-xl xl:text-2xl font-medium">
+                自分の相棒が他の人（または他の相棒）とコミュニケーションをとり、何かが決定したり進展があった場合、その内容は毎日の「日記」としてわかりやすく要約して報告してくれます。また、重要な意思決定や予算が絡む事項については、独断で進めず必ずユーザーへ「承認」をもらいに来る、安全なプロセスを備えています。
               </p>
             </div>
           </div>
@@ -419,22 +419,22 @@
 
       <!-- Feature 4 CTA -->
       <div class="w-[92%] xl:w-[88%] max-w-[1920px] mx-auto py-40">
-        <div class="glass-card-dark rounded-[4rem] p-12 lg:p-24 text-center lg:text-left flex flex-col lg:flex-row items-center gap-16 overflow-hidden relative shadow-[0_30px_80px_rgba(0,0,0,0.3)]">
+        <div class="glass-card-dark rounded-[4rem] p-12 lg:p-24 text-center lg:text-left flex flex-col lg:flex-row items-center gap-20 overflow-hidden relative shadow-[0_30px_80px_rgba(0,0,0,0.3)]">
           <div class="absolute top-[-50%] right-[-20%] w-[80%] h-[150%] bg-gradient-to-bl from-indigo-500/40 via-purple-500/20 to-transparent blur-[120px] z-0 pointer-events-none animate-pulse" style="animation-duration: 4s;"></div>
           
           <div class="w-full lg:w-2/3 relative z-10">
-            <span class="inline-block bg-white/10 text-white border border-white/20 px-5 py-2 rounded-full font-bold tracking-widest text-sm uppercase mb-8 backdrop-blur-md">Online to Offline</span>
-            <h2 class="text-5xl lg:text-6xl font-extrabold text-white mb-8 tracking-tight leading-tight">リアルイベントも、一緒に。</h2>
-            <p class="text-slate-300 text-xl leading-relaxed mb-12 max-w-2xl font-medium">
-              デジタル空間だけではありません。相棒が提案したオフラインのリアルイベントを一緒に楽しむことが可能。現実の体験がDNAにフィードバックされ、相棒はよりあなたらしく成長します。
+            <span class="inline-block bg-white/10 text-white border border-white/20 px-6 py-2 rounded-full font-bold tracking-widest text-base uppercase mb-8 backdrop-blur-md">Online to Offline</span>
+            <h2 class="text-5xl lg:text-7xl font-extrabold text-white mb-10 tracking-tight leading-tight">リアルな体験も、<br/>共に分かち合う。</h2>
+            <p class="text-slate-300 text-2xl leading-relaxed mb-12 max-w-3xl font-medium">
+              AIとのつながりは、デジタル空間のチャット画面だけにとどまりません。相棒があなたの嗜好を分析して提案したオフラインのリアルなイベントやアクティビティを、（デバイスなどを通じて）一緒に体験し楽しむことが可能です。現実世界での行動や感動の体験が新たに環境DNAとしてフィードバックされることで、相棒はより「あなたらしい存在」へと進化を続けていきます。
             </p>
-            <button onclick="navigateTo('contact')" class="px-10 py-5 rounded-full bg-white text-slate-900 font-extrabold text-lg hover:bg-slate-100 hover:scale-105 transition-all duration-300 inline-flex items-center shadow-xl shadow-white/20">
-              導入について相談する <i data-lucide="arrow-right" class="ml-3" style="width: 20px; height: 20px;"></i>
+            <button onclick="navigateTo('contact')" class="px-12 py-6 rounded-full bg-white text-slate-900 font-extrabold text-xl hover:bg-slate-100 hover:scale-105 transition-all duration-300 inline-flex items-center shadow-xl shadow-white/20">
+              デジタル相棒の導入を相談する <i data-lucide="arrow-right" class="ml-4" style="width: 24px; height: 24px;"></i>
             </button>
           </div>
           <div class="w-full lg:w-1/3 flex justify-center relative z-10">
-            <div class="w-64 h-64 rounded-[3.5rem] bg-gradient-to-br from-white/10 to-white/5 border border-white/20 backdrop-blur-xl flex items-center justify-center shadow-2xl transform rotate-6 hover:rotate-0 transition-transform duration-500">
-              <i data-lucide="ticket" class="text-white drop-shadow-2xl" stroke-width="1" style="width: 100px; height: 100px;"></i>
+            <div class="w-72 h-72 rounded-[4rem] bg-gradient-to-br from-white/10 to-white/5 border border-white/20 backdrop-blur-xl flex items-center justify-center shadow-2xl transform rotate-6 hover:rotate-0 transition-transform duration-500">
+              <i data-lucide="ticket" class="text-white drop-shadow-2xl" stroke-width="1" style="width: 120px; height: 120px;"></i>
             </div>
           </div>
         </div>
@@ -445,131 +445,139 @@
     <!-- 事業内容一覧ページ -->
     <!-- ============================================== -->
     <div id="page-services" class="page-content">
-      <div class="pt-32 pb-20 text-center px-6">
-        <h1 class="text-5xl md:text-7xl font-extrabold tracking-tighter text-slate-900 mb-8">事業内容</h1>
-        <p class="text-2xl text-slate-600 max-w-3xl mx-auto font-medium leading-relaxed">
-          AIからリアルな空間作りまで、多角的なアプローチで<br class="hidden md:block"/>
-          社会課題の解決に取り組みます。
+      <div class="pt-32 pb-24 text-center px-6">
+        <h1 class="text-5xl md:text-7xl lg:text-[7rem] font-extrabold tracking-tighter text-slate-900 mb-10">事業内容</h1>
+        <p class="text-2xl xl:text-3xl text-slate-600 max-w-4xl mx-auto font-medium leading-relaxed">
+          AIデータの活用から、人が集うリアルな空間作りまで。<br class="hidden md:block"/>
+          GRAN NOAHSは多角的なアプローチで、本質的な社会課題の解決に取り組みます。
         </p>
       </div>
 
       <!-- フル幅を意識し ％ で広がるコンテナ -->
-      <div class="w-[92%] xl:w-[85%] max-w-[1920px] mx-auto py-16 space-y-32">
+      <div class="w-[92%] xl:w-[85%] max-w-[1920px] mx-auto py-16 space-y-40">
         
         <!-- AI事業への導線 -->
-        <div class="glass-card rounded-[4rem] p-12 lg:p-20 flex flex-col md:flex-row items-center gap-16 group hover:shadow-[0_30px_60px_rgba(79,70,229,0.15)] transition-shadow duration-500 relative overflow-hidden">
+        <div class="glass-card rounded-[4rem] p-12 lg:p-24 flex flex-col md:flex-row items-center gap-20 group hover:shadow-[0_30px_60px_rgba(79,70,229,0.15)] transition-shadow duration-500 relative overflow-hidden">
            <div class="w-full md:w-2/3 relative z-10">
-             <div class="text-base font-extrabold text-indigo-500 tracking-widest uppercase mb-6 bg-indigo-50 inline-block px-4 py-1.5 rounded-full">Core Business</div>
-             <h2 class="text-4xl md:text-5xl font-extrabold text-slate-900 mb-6 tracking-tight group-hover:gradient-text transition-colors">AIデータを活用した社会貢献事業</h2>
-             <p class="text-slate-600 text-xl leading-relaxed mb-10 font-medium max-w-2xl">
-               人格DNAと環境DNAを用いたシミュレーションにより、あなた専属の「デジタル相棒」を構築します。
+             <div class="text-lg font-extrabold text-indigo-500 tracking-widest uppercase mb-8 bg-indigo-50 inline-block px-5 py-2 rounded-full">Core Business</div>
+             <h2 class="text-4xl md:text-5xl lg:text-6xl font-extrabold text-slate-900 mb-8 tracking-tight group-hover:gradient-text transition-colors">AIデータを活用した社会貢献事業</h2>
+             <p class="text-slate-600 text-xl xl:text-2xl leading-relaxed mb-12 font-medium max-w-3xl">
+               個人の特性や価値観を「人格DNA」、周囲の環境を「環境DNA」として精緻にモデル化。これらを掛け合わせた高度なシミュレーション技術により、組織の採用ミスマッチを防ぎ、あなた専属の「デジタル相棒」を構築します。スケジュール調整から他者の相棒との連携まで、次世代のサポート体験を提供する当社の主力事業です。
              </p>
              <button 
                onclick="navigateTo('ai-partner')"
-               class="inline-flex items-center text-lg font-bold text-slate-900 hover:text-indigo-600 bg-white/50 border border-slate-200 px-8 py-4 rounded-full shadow-sm hover:shadow-lg transition-all"
+               class="inline-flex items-center text-xl font-bold text-slate-900 hover:text-indigo-600 bg-white/50 border border-slate-200 px-10 py-5 rounded-full shadow-sm hover:shadow-lg transition-all"
              >
-               デジタル相棒の詳細を見る <i data-lucide="arrow-right" class="ml-2 group-hover:translate-x-1 transition-transform" style="width: 20px; height: 20px;"></i>
+               デジタル相棒の詳細を見る <i data-lucide="arrow-right" class="ml-3 group-hover:translate-x-2 transition-transform" style="width: 24px; height: 24px;"></i>
              </button>
            </div>
            <div class="w-full md:w-1/3 flex justify-center relative z-10">
-              <div class="w-48 h-48 rounded-[3rem] bg-gradient-to-br from-indigo-500 to-purple-600 shadow-2xl shadow-indigo-500/30 flex items-center justify-center group-hover:scale-110 group-hover:rotate-6 transition-all duration-500">
-                <i data-lucide="bot" class="text-white" stroke-width="1.5" style="width: 72px; height: 72px;"></i>
+              <div class="w-64 h-64 rounded-[4rem] bg-gradient-to-br from-indigo-500 to-purple-600 shadow-2xl shadow-indigo-500/30 flex items-center justify-center group-hover:scale-110 group-hover:rotate-6 transition-all duration-500">
+                <i data-lucide="bot" class="text-white" stroke-width="1.5" style="width: 96px; height: 96px;"></i>
               </div>
            </div>
         </div>
 
         <div class="flex items-center justify-center">
-          <div class="w-32 h-1.5 bg-slate-200 rounded-full"></div>
+          <div class="w-40 h-2 bg-slate-200 rounded-full"></div>
         </div>
 
         <!-- 地方創生 -->
-        <div class="flex flex-col md:flex-row gap-20 items-center">
-          <div class="w-full md:w-1/2">
-            <div class="w-20 h-20 rounded-[2rem] bg-emerald-100 flex items-center justify-center mb-8">
-              <i data-lucide="leaf" class="text-emerald-600" style="width: 40px; height: 40px;"></i>
+        <div class="flex flex-col lg:flex-row gap-20 xl:gap-24 items-center">
+          <div class="w-full lg:w-1/2">
+            <div class="w-24 h-24 rounded-[2rem] bg-emerald-100 flex items-center justify-center mb-10">
+              <i data-lucide="leaf" class="text-emerald-600" style="width: 48px; height: 48px;"></i>
             </div>
-            <h2 class="text-4xl font-extrabold text-slate-900 mb-4 tracking-tight">地方創生事業</h2>
-            <h3 class="text-2xl font-bold text-emerald-500 mb-8">古民家 × システム開発</h3>
-            <p class="text-slate-600 text-xl leading-relaxed mb-8 font-medium">
-              日本各地に眠る「古民家」などの遊休資産を、現代のニーズに合わせたサービス施設として再生します。
-              空間設計に留まらず、施設の運営を効率化し顧客体験を向上させるための「専用システム開発」までを一貫して提供します。
+            <h2 class="text-5xl font-extrabold text-slate-900 mb-6 tracking-tight">地方創生事業</h2>
+            <h3 class="text-3xl font-bold text-emerald-500 mb-10">古民家 × システム開発</h3>
+            <p class="text-slate-600 text-xl xl:text-2xl leading-relaxed mb-10 font-medium">
+              日本各地にひっそりと眠る「古民家」などの価値ある遊休資産。私たちはそれらを、現代の多様なライフスタイルやニーズに最適化された魅力的なサービス施設へと生まれ変わらせます。
             </p>
-            <ul class="space-y-5 mt-10 glass-card p-8 rounded-[2rem] border-none">
-              <li class="flex items-center text-slate-700 text-lg font-bold">
-                <div class="w-2.5 h-2.5 rounded-full bg-emerald-500 mr-5"></div>
-                古民家を活用した複合施設の企画・設計
+            <p class="text-slate-600 text-xl xl:text-2xl leading-relaxed mb-10 font-medium">
+              単なる空間のリノベーションに留まらず、施設の運営を極限まで効率化し、訪れる人々の体験価値を最大化するための「専用システム開発」までをワンストップで提供。地方に新たな雇用と人の流れを継続的に創り出し、持続可能な地域社会をデザインします。
+            </p>
+            <ul class="space-y-6 mt-12 glass-card p-10 rounded-[2.5rem] border-none">
+              <li class="flex items-center text-slate-800 text-xl font-bold">
+                <div class="w-3 h-3 rounded-full bg-emerald-500 mr-6"></div>
+                古民家などの遊休資産を活用した複合施設の企画・空間設計
               </li>
-              <li class="flex items-center text-slate-700 text-lg font-bold">
-                <div class="w-2.5 h-2.5 rounded-full bg-emerald-500 mr-5"></div>
-                施設運営のための独自システム・アプリ開発
+              <li class="flex items-center text-slate-800 text-xl font-bold">
+                <div class="w-3 h-3 rounded-full bg-emerald-500 mr-6"></div>
+                施設運営を劇的に効率化する独自システム・アプリの開発と導入
               </li>
             </ul>
           </div>
-          <div class="w-full md:w-1/2">
-            <div class="aspect-[4/3] rounded-[3rem] bg-gradient-to-br from-emerald-50 to-teal-100 border-2 border-white shadow-2xl flex items-center justify-center relative overflow-hidden group w-full">
-              <div class="w-24 h-24 rounded-full bg-white/50 backdrop-blur-md flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform cursor-pointer">
-                 <i data-lucide="play" class="text-emerald-600 ml-2" style="width: 40px; height: 40px;"></i>
+          <div class="w-full lg:w-1/2">
+            <div class="aspect-[4/3] rounded-[4rem] bg-gradient-to-br from-emerald-50 to-teal-100 border-2 border-white shadow-2xl flex items-center justify-center relative overflow-hidden group w-full">
+              <div class="w-32 h-32 rounded-full bg-white/50 backdrop-blur-md flex items-center justify-center shadow-xl group-hover:scale-110 transition-transform cursor-pointer">
+                 <i data-lucide="play" class="text-emerald-600 ml-3" style="width: 56px; height: 56px;"></i>
               </div>
-              <span class="absolute bottom-8 font-bold text-emerald-800/50 text-lg">[ Concept Video ]</span>
+              <span class="absolute bottom-10 font-bold text-emerald-800/50 text-2xl">[ Regional Innovation Concept ]</span>
             </div>
           </div>
         </div>
 
         <!-- コミュニティ -->
-        <div class="flex flex-col md:flex-row-reverse gap-20 items-center">
-          <div class="w-full md:w-1/2">
-            <div class="w-20 h-20 rounded-[2rem] bg-orange-100 flex items-center justify-center mb-8">
-              <i data-lucide="users" class="text-orange-600" style="width: 40px; height: 40px;"></i>
+        <div class="flex flex-col lg:flex-row-reverse gap-20 xl:gap-24 items-center">
+          <div class="w-full lg:w-1/2">
+            <div class="w-24 h-24 rounded-[2rem] bg-orange-100 flex items-center justify-center mb-10">
+              <i data-lucide="users" class="text-orange-600" style="width: 48px; height: 48px;"></i>
             </div>
-            <h2 class="text-4xl font-extrabold text-slate-900 mb-4 tracking-tight">コミュニティ運営</h2>
-            <h3 class="text-2xl font-bold text-orange-500 mb-8">NOAHコミュニティ <span class="text-lg font-medium text-slate-500 ml-3">(No One Alone Here)</span></h3>
-            <p class="text-slate-600 text-xl leading-relaxed mb-8 font-medium">
-              「誰も一人にしない」をコンセプトに、多様なバックグラウンドを持つ人々が集い、実践的な学びや情報交換、新たな協業が生まれる場所として「NOAHコミュニティ」を運営しています。
+            <h2 class="text-5xl font-extrabold text-slate-900 mb-6 tracking-tight">コミュニティ運営</h2>
+            <h3 class="text-3xl font-bold text-orange-500 mb-10">NOAHコミュニティ <span class="text-2xl font-medium text-slate-500 ml-4">(No One Alone Here)</span></h3>
+            <p class="text-slate-600 text-xl xl:text-2xl leading-relaxed mb-8 font-medium">
+              「誰も一人にしない（No One Alone Here）」という強い信念のもと、年齢や職業、バックグラウンドの異なる多様な人々が集う実践的なコミュニティを運営しています。単なる交流の場ではなく、実践的な学びや深いレベルでの情報交換、そして枠組みを超えた新たな協業が日々生まれる熱狂的な空間です。
             </p>
-            <p class="text-slate-600 text-xl leading-relaxed mb-10 font-medium">
-              オンラインでのつながりはもちろん、オフラインでのイベントや勉強会を通じて、参加者一人ひとりの成長と自己実現を強力に後押しする、心理的安全性に満ちたサードプレイスを提供しています。現在、多くのメンバーが活発に活動中です。
+            <p class="text-slate-600 text-xl xl:text-2xl leading-relaxed mb-12 font-medium">
+              オンラインでのシームレスなつながりと、オフラインでの熱を帯びたイベントや勉強会を掛け合わせることで、参加者一人ひとりの飛躍的な成長と自己実現を強力に後押しします。心理的安全性が担保されたこのサードプレイスで、現在多くのメンバーが活発に活動中です。
             </p>
             <a 
               href="https://noonealonehere.pages.dev/"
               target="_blank"
               rel="noopener noreferrer"
-              class="inline-flex items-center text-lg font-bold text-white bg-gradient-to-r from-orange-500 to-amber-500 px-10 py-5 rounded-full shadow-xl shadow-orange-500/30 hover:shadow-orange-500/50 hover:-translate-y-1 transition-all duration-300 group"
+              class="inline-flex items-center text-xl font-bold text-white bg-gradient-to-r from-orange-500 to-amber-500 px-12 py-6 rounded-full shadow-2xl shadow-orange-500/30 hover:shadow-orange-500/50 hover:-translate-y-2 transition-all duration-300 group"
             >
-              コミュニティ公式サイトへ <i data-lucide="arrow-up-right" class="ml-3 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" style="width: 24px; height: 24px;"></i>
+              コミュニティ公式サイトへ <i data-lucide="arrow-up-right" class="ml-4 group-hover:translate-x-2 group-hover:-translate-y-2 transition-transform" style="width: 28px; height: 28px;"></i>
             </a>
           </div>
-          <div class="w-full md:w-1/2">
-            <div class="aspect-[4/3] rounded-[3rem] bg-gradient-to-br from-orange-50 to-amber-100 border-2 border-white shadow-2xl flex items-center justify-center w-full">
-              <span class="text-orange-800/40 font-bold text-2xl">[ Community Gallery ]</span>
+          <div class="w-full lg:w-1/2">
+            <div class="aspect-[4/3] rounded-[4rem] bg-gradient-to-br from-orange-50 to-amber-100 border-2 border-white shadow-2xl flex items-center justify-center w-full">
+              <span class="text-orange-800/40 font-bold text-3xl">[ Community Activity Gallery ]</span>
             </div>
           </div>
         </div>
 
         <!-- SaaaS -->
-        <div class="flex flex-col md:flex-row gap-20 items-center">
-          <div class="w-full md:w-1/2">
-             <div class="w-20 h-20 rounded-[2rem] bg-indigo-100 flex items-center justify-center mb-8">
-              <i data-lucide="monitor-check" class="text-indigo-600" style="width: 40px; height: 40px;"></i>
+        <div class="flex flex-col lg:flex-row gap-20 xl:gap-24 items-center">
+          <div class="w-full lg:w-1/2">
+             <div class="w-24 h-24 rounded-[2rem] bg-indigo-100 flex items-center justify-center mb-10">
+              <i data-lucide="monitor-check" class="text-indigo-600" style="width: 48px; height: 48px;"></i>
             </div>
-            <h2 class="text-4xl font-extrabold text-slate-900 mb-4 tracking-tight">SaaaS 事業</h2>
-            <h3 class="text-2xl font-bold text-indigo-500 mb-8">バックオフィス業務の効率化</h3>
-            <p class="text-slate-600 text-xl leading-relaxed mb-8 font-medium">
-              企業や個人事業主が抱える煩雑な事務作業を、デジタル技術と最適化されたオペレーションによってサポート。
-              本来集中すべきコア業務にリソースを割けるよう、ツールの導入支援や自動化を行います。
+            <h2 class="text-5xl font-extrabold text-slate-900 mb-6 tracking-tight">SaaaS 事業</h2>
+            <h3 class="text-3xl font-bold text-indigo-500 mb-10">バックオフィス業務の徹底的な効率化</h3>
+            <p class="text-slate-600 text-xl xl:text-2xl leading-relaxed mb-8 font-medium">
+              企業や個人事業主が日々の業務の中で抱える、煩雑で時間のかかる事務作業やバックオフィス業務。私たちは最新のデジタル技術と最適化されたオペレーション設計によって、これらの業務を徹底的に効率化・自動化します。
+            </p>
+            <p class="text-slate-600 text-xl xl:text-2xl leading-relaxed mb-10 font-medium">
+              単に作業を代行するのではなく、業務フローそのものを見直し、最適なツールの選定・導入支援を行います。本来あなたが持てる時間と情熱のすべてを注ぐべき「コア業務」に集中できる、圧倒的に身軽でクリエイティブなビジネス環境の構築をサポートします。
             </p>
           </div>
-          <div class="w-full md:w-1/2">
-            <div class="aspect-[4/3] rounded-[3rem] bg-slate-900 shadow-2xl flex items-center justify-center p-10 relative overflow-hidden w-full">
+          <div class="w-full lg:w-1/2">
+            <div class="aspect-[4/3] rounded-[4rem] bg-slate-900 shadow-2xl flex items-center justify-center p-12 relative overflow-hidden w-full">
                <!-- 擬似的なダッシュボードUI -->
-               <div class="w-full h-full border-2 border-slate-700/50 rounded-2xl bg-slate-800/50 flex flex-col p-6">
-                 <div class="w-full h-10 border-b border-slate-700/50 flex items-center mb-6">
-                   <div class="flex gap-2"><div class="w-4 h-4 rounded-full bg-slate-600"></div><div class="w-4 h-4 rounded-full bg-slate-600"></div><div class="w-4 h-4 rounded-full bg-slate-600"></div></div>
+               <div class="w-full h-full border-2 border-slate-700/50 rounded-3xl bg-slate-800/50 flex flex-col p-8">
+                 <div class="w-full h-12 border-b border-slate-700/50 flex items-center mb-8">
+                   <div class="flex gap-3"><div class="w-5 h-5 rounded-full bg-slate-600"></div><div class="w-5 h-5 rounded-full bg-slate-600"></div><div class="w-5 h-5 rounded-full bg-slate-600"></div></div>
                  </div>
-                 <div class="flex-grow flex gap-6">
-                   <div class="w-1/3 h-full bg-slate-700/30 rounded-xl"></div>
-                   <div class="w-2/3 flex flex-col gap-6">
-                     <div class="w-full h-1/2 bg-indigo-500/20 rounded-xl border-2 border-indigo-500/30"></div>
-                     <div class="w-full h-1/2 bg-slate-700/30 rounded-xl"></div>
+                 <div class="flex-grow flex gap-8">
+                   <div class="w-1/3 h-full bg-slate-700/30 rounded-2xl"></div>
+                   <div class="w-2/3 flex flex-col gap-8">
+                     <div class="w-full h-1/2 bg-indigo-500/20 rounded-2xl border-2 border-indigo-500/30 relative overflow-hidden">
+                       <div class="absolute bottom-0 left-0 w-full h-1/2 bg-gradient-to-t from-indigo-500/40 to-transparent"></div>
+                     </div>
+                     <div class="w-full h-1/2 bg-slate-700/30 rounded-2xl flex items-center justify-center">
+                       <span class="text-slate-500 font-bold text-xl">System Optimization</span>
+                     </div>
                    </div>
                  </div>
                </div>
@@ -584,51 +592,55 @@
     <!-- 会社概要ページ -->
     <!-- ============================================== -->
     <div id="page-about" class="page-content">
-      <div class="pt-32 pb-20 text-center px-6">
-        <h1 class="text-5xl md:text-7xl font-extrabold tracking-tighter text-slate-900 mb-6">会社概要</h1>
+      <div class="pt-32 pb-24 text-center px-6">
+        <h1 class="text-5xl md:text-7xl lg:text-[7rem] font-extrabold tracking-tighter text-slate-900 mb-8">会社概要</h1>
+        <p class="text-2xl xl:text-3xl text-slate-600 max-w-4xl mx-auto font-medium leading-relaxed">
+          「人とテクノロジーが調和する未来へ」<br/>
+          私たちのビジョンと企業情報をご案内します。
+        </p>
       </div>
 
       <!-- 会社概要は広がりすぎると間延びするため割合を少し絞る -->
-      <div class="w-[92%] xl:w-[75%] max-w-[1920px] mx-auto">
-        <div class="glass-card rounded-[3.5rem] overflow-hidden hover:shadow-[0_30px_60px_rgba(0,0,0,0.05)] transition-shadow duration-500">
-          <div class="border-b border-white/50 bg-white/40 px-12 py-10 flex items-center">
-            <i data-lucide="building-2" class="mr-5 text-indigo-500" style="width: 36px; height: 36px;"></i>
-            <h3 class="text-3xl font-extrabold text-slate-900">企業情報</h3>
+      <div class="w-[92%] xl:w-[75%] max-w-[1920px] mx-auto pb-40">
+        <div class="glass-card rounded-[4rem] overflow-hidden hover:shadow-[0_40px_80px_rgba(0,0,0,0.08)] transition-shadow duration-500">
+          <div class="border-b border-white/50 bg-white/60 px-12 py-12 flex items-center">
+            <i data-lucide="building-2" class="mr-6 text-indigo-500" style="width: 48px; height: 48px;"></i>
+            <h3 class="text-4xl font-extrabold text-slate-900">企業情報</h3>
           </div>
-          <div class="p-12 bg-white/30 backdrop-blur-sm">
+          <div class="p-12 lg:p-16 bg-white/40 backdrop-blur-md">
             <dl class="divide-y divide-slate-200/50">
-              <div class="py-8 sm:grid sm:grid-cols-4 sm:gap-6 flex flex-col">
-                <dt class="text-lg font-bold text-slate-500 mb-2 sm:mb-0">会社名</dt>
-                <dd class="text-2xl text-slate-900 sm:col-span-3 font-extrabold">
-                  株式会社GRAN NOAHS
+              <div class="py-10 sm:grid sm:grid-cols-4 sm:gap-8 flex flex-col">
+                <dt class="text-xl font-bold text-slate-500 mb-3 sm:mb-0 pt-2">会社名</dt>
+                <dd class="text-3xl text-slate-900 sm:col-span-3 font-extrabold tracking-tight">
+                  株式会社GRAN NOAHS <span class="text-xl text-slate-500 font-medium ml-4 block sm:inline mt-2 sm:mt-0">(GRAN NOAHS Co., Ltd.)</span>
                 </dd>
               </div>
-              <div class="py-8 sm:grid sm:grid-cols-4 sm:gap-6 flex flex-col">
-                <dt class="text-lg font-bold text-slate-500 mb-2 sm:mb-0">代表取締役</dt>
-                <dd class="text-2xl text-slate-900 sm:col-span-3 font-bold flex items-center">
-                  <div class="w-10 h-10 rounded-full bg-indigo-100 flex items-center justify-center mr-4">
-                    <i data-lucide="user" class="text-indigo-600" style="width: 20px; height: 20px;"></i>
+              <div class="py-10 sm:grid sm:grid-cols-4 sm:gap-8 flex flex-col">
+                <dt class="text-xl font-bold text-slate-500 mb-3 sm:mb-0 pt-2">代表取締役</dt>
+                <dd class="text-3xl text-slate-900 sm:col-span-3 font-bold flex items-center">
+                  <div class="w-12 h-12 rounded-full bg-indigo-100 flex items-center justify-center mr-5">
+                    <i data-lucide="user" class="text-indigo-600" style="width: 24px; height: 24px;"></i>
                   </div>
                   柳町 一磨
                 </dd>
               </div>
-              <div class="py-8 sm:grid sm:grid-cols-4 sm:gap-6 flex flex-col">
-                <dt class="text-lg font-bold text-slate-500 mb-2 sm:mb-0">所在地</dt>
-                <dd class="text-2xl text-slate-900 sm:col-span-3 flex items-center font-bold">
-                  <div class="w-10 h-10 rounded-full bg-pink-100 flex items-center justify-center mr-4 flex-shrink-0">
-                    <i data-lucide="map-pin" class="text-pink-600" style="width: 20px; height: 20px;"></i>
+              <div class="py-10 sm:grid sm:grid-cols-4 sm:gap-8 flex flex-col">
+                <dt class="text-xl font-bold text-slate-500 mb-3 sm:mb-0 pt-2">所在地</dt>
+                <dd class="text-2xl xl:text-3xl text-slate-900 sm:col-span-3 flex items-center font-bold">
+                  <div class="w-12 h-12 rounded-full bg-pink-100 flex items-center justify-center mr-5 flex-shrink-0">
+                    <i data-lucide="map-pin" class="text-pink-600" style="width: 24px; height: 24px;"></i>
                   </div>
                   <span>愛知県名古屋市西区花の木</span>
                 </dd>
               </div>
-              <div class="py-8 sm:grid sm:grid-cols-4 sm:gap-6 flex flex-col">
-                <dt class="text-lg font-bold text-slate-500 mb-2 sm:mb-0 pt-2">事業内容</dt>
-                <dd class="text-xl text-slate-700 sm:col-span-3 font-bold">
-                  <ul class="space-y-5">
-                    <li class="flex items-center bg-white/50 p-4 rounded-2xl shadow-sm border border-white"><span class="w-3 h-3 rounded-full bg-indigo-500 mr-4"></span>AIデータを活用した社会貢献事業</li>
-                    <li class="flex items-center bg-white/50 p-4 rounded-2xl shadow-sm border border-white"><span class="w-3 h-3 rounded-full bg-emerald-500 mr-4"></span>地方創生事業</li>
-                    <li class="flex items-center bg-white/50 p-4 rounded-2xl shadow-sm border border-white"><span class="w-3 h-3 rounded-full bg-orange-500 mr-4"></span>コミュニティの運営、サポート</li>
-                    <li class="flex items-center bg-white/50 p-4 rounded-2xl shadow-sm border border-white"><span class="w-3 h-3 rounded-full bg-slate-800 mr-4"></span>SaaaS事業</li>
+              <div class="py-10 sm:grid sm:grid-cols-4 sm:gap-8 flex flex-col">
+                <dt class="text-xl font-bold text-slate-500 mb-3 sm:mb-0 pt-3">事業内容</dt>
+                <dd class="text-xl xl:text-2xl text-slate-800 sm:col-span-3 font-bold">
+                  <ul class="space-y-6">
+                    <li class="flex items-center bg-white/70 p-5 rounded-2xl shadow-sm border border-white hover:bg-white transition-colors"><span class="w-4 h-4 rounded-full bg-indigo-500 mr-5"></span>AIデータを活用した社会貢献事業</li>
+                    <li class="flex items-center bg-white/70 p-5 rounded-2xl shadow-sm border border-white hover:bg-white transition-colors"><span class="w-4 h-4 rounded-full bg-emerald-500 mr-5"></span>地方創生事業（施設設計・システム開発）</li>
+                    <li class="flex items-center bg-white/70 p-5 rounded-2xl shadow-sm border border-white hover:bg-white transition-colors"><span class="w-4 h-4 rounded-full bg-orange-500 mr-5"></span>コミュニティの運営、サポート（NOAHコミュニティ）</li>
+                    <li class="flex items-center bg-white/70 p-5 rounded-2xl shadow-sm border border-white hover:bg-white transition-colors"><span class="w-4 h-4 rounded-full bg-slate-800 mr-5"></span>SaaaS事業（バックオフィス業務効率化）</li>
                   </ul>
                 </dd>
               </div>
@@ -642,72 +654,72 @@
     <!-- お問い合わせページ -->
     <!-- ============================================== -->
     <div id="page-contact" class="page-content">
-      <div class="pt-32 pb-20 text-center px-6">
-        <h1 class="text-5xl md:text-7xl font-extrabold tracking-tighter text-slate-900 mb-6">お問い合わせ</h1>
-        <p class="text-2xl text-slate-600 max-w-3xl mx-auto font-medium">
-          事業に関するご質問など、お気軽にお問い合わせください。
+      <div class="pt-32 pb-24 text-center px-6">
+        <h1 class="text-5xl md:text-7xl lg:text-[7rem] font-extrabold tracking-tighter text-slate-900 mb-8">お問い合わせ</h1>
+        <p class="text-2xl xl:text-3xl text-slate-600 max-w-4xl mx-auto font-medium leading-relaxed">
+          AI事業についてのご相談、地方創生やコミュニティに関するご質問など、<br class="hidden md:block"/>まずはお気軽にお問い合わせください。
         </p>
       </div>
 
       <!-- フォームも広がりすぎを防ぐため割合を絞る -->
-      <div class="w-[92%] xl:w-[75%] max-w-[1920px] mx-auto">
-        <div class="glass-card rounded-[3.5rem] shadow-[0_30px_80px_rgba(0,0,0,0.08)] p-10 md:p-16 relative overflow-hidden">
-          <div class="absolute top-0 right-0 w-80 h-80 bg-indigo-400/10 rounded-full blur-3xl pointer-events-none"></div>
+      <div class="w-[92%] xl:w-[75%] max-w-[1920px] mx-auto pb-40">
+        <div class="glass-card rounded-[4rem] shadow-[0_40px_100px_rgba(0,0,0,0.08)] p-12 md:p-20 relative overflow-hidden">
+          <div class="absolute top-0 right-0 w-[500px] h-[500px] bg-indigo-400/10 rounded-full blur-[100px] pointer-events-none"></div>
 
           <!-- 送信完了メッセージ -->
-          <div id="contact-success" class="text-center py-16 relative z-10" style="display: none;">
-            <div class="w-32 h-32 bg-gradient-to-br from-emerald-400 to-teal-500 text-white rounded-full flex items-center justify-center mx-auto mb-10 shadow-xl shadow-emerald-500/30 animate-bounce" style="animation-iteration-count: 1;">
-              <i data-lucide="monitor-check" stroke-width="2" style="width: 60px; height: 60px;"></i>
+          <div id="contact-success" class="text-center py-20 relative z-10" style="display: none;">
+            <div class="w-40 h-40 bg-gradient-to-br from-emerald-400 to-teal-500 text-white rounded-full flex items-center justify-center mx-auto mb-12 shadow-2xl shadow-emerald-500/40 animate-bounce" style="animation-iteration-count: 1;">
+              <i data-lucide="monitor-check" stroke-width="2" style="width: 80px; height: 80px;"></i>
             </div>
-            <h2 class="text-4xl font-extrabold text-slate-900 mb-6">送信完了</h2>
-            <p class="text-slate-600 mb-12 text-2xl font-medium">
-              内容を確認次第、担当者よりご連絡させていただきます。<br />
-              誠にありがとうございました。
+            <h2 class="text-5xl font-extrabold text-slate-900 mb-8">送信完了</h2>
+            <p class="text-slate-600 mb-16 text-2xl xl:text-3xl font-medium leading-relaxed">
+              お問い合わせ内容を無事に送信いたしました。<br />
+              内容を確認次第、担当者よりご連絡させていただきます。<br/>誠にありがとうございました。
             </p>
             <button 
               onclick="resetContactForm()"
-              class="text-indigo-600 font-bold hover:text-indigo-700 hover:underline bg-indigo-50 px-8 py-4 rounded-full transition-colors text-lg"
+              class="text-indigo-600 font-bold hover:text-indigo-700 hover:underline bg-indigo-50 px-10 py-5 rounded-full transition-colors text-xl"
             >
               続けて問い合わせをする
             </button>
           </div>
 
           <!-- フォーム -->
-          <form id="contact-form" onsubmit="submitContactForm(event)" class="space-y-8 relative z-10">
+          <form id="contact-form" onsubmit="submitContactForm(event)" class="space-y-10 relative z-10">
             <!-- 2カラム構成 -->
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
               <div>
-                <label class="block text-base font-bold text-slate-700 mb-3 ml-2">お名前 <span class="text-pink-500">*</span></label>
-                <input type="text" required class="w-full px-6 py-5 rounded-2xl border border-white/80 focus:ring-2 focus:ring-indigo-500 focus:border-transparent transition-all outline-none bg-white/60 backdrop-blur-sm hover:bg-white/80 font-bold text-slate-800 shadow-sm text-lg" placeholder="山田 太郎">
+                <label class="block text-xl font-bold text-slate-700 mb-4 ml-2">貴社名 / お名前 <span class="text-pink-500">*</span></label>
+                <input type="text" required class="w-full px-8 py-6 rounded-3xl border border-white/80 focus:ring-4 focus:ring-indigo-500/50 focus:border-transparent transition-all outline-none bg-white/70 backdrop-blur-md hover:bg-white/90 font-bold text-slate-800 shadow-sm text-xl" placeholder="株式会社〇〇 / 山田 太郎">
               </div>
 
               <div>
-                <label class="block text-base font-bold text-slate-700 mb-3 ml-2">メールアドレス <span class="text-pink-500">*</span></label>
-                <input type="email" required class="w-full px-6 py-5 rounded-2xl border border-white/80 focus:ring-2 focus:ring-indigo-500 focus:border-transparent transition-all outline-none bg-white/60 backdrop-blur-sm hover:bg-white/80 font-bold text-slate-800 shadow-sm text-lg" placeholder="info@example.com">
+                <label class="block text-xl font-bold text-slate-700 mb-4 ml-2">メールアドレス <span class="text-pink-500">*</span></label>
+                <input type="email" required class="w-full px-8 py-6 rounded-3xl border border-white/80 focus:ring-4 focus:ring-indigo-500/50 focus:border-transparent transition-all outline-none bg-white/70 backdrop-blur-md hover:bg-white/90 font-bold text-slate-800 shadow-sm text-xl" placeholder="info@example.com">
               </div>
             </div>
 
             <div>
-              <label class="block text-base font-bold text-slate-700 mb-3 ml-2">お問い合わせ種別 <span class="text-pink-500">*</span></label>
-              <select class="w-full px-6 py-5 rounded-2xl border border-white/80 focus:ring-2 focus:ring-indigo-500 focus:border-transparent transition-all outline-none bg-white/60 backdrop-blur-sm hover:bg-white/80 font-bold text-slate-800 shadow-sm appearance-none cursor-pointer text-lg">
-                <option value="AIデジタル相棒について">AIデジタル相棒について</option>
-                <option value="地方創生について">地方創生事業について</option>
+              <label class="block text-xl font-bold text-slate-700 mb-4 ml-2">お問い合わせ種別 <span class="text-pink-500">*</span></label>
+              <select class="w-full px-8 py-6 rounded-3xl border border-white/80 focus:ring-4 focus:ring-indigo-500/50 focus:border-transparent transition-all outline-none bg-white/70 backdrop-blur-md hover:bg-white/90 font-bold text-slate-800 shadow-sm appearance-none cursor-pointer text-xl">
+                <option value="AIデジタル相棒について">AIデジタル相棒（社会貢献事業）について</option>
+                <option value="地方創生について">地方創生事業・古民家活用について</option>
                 <option value="NOAHコミュニティについて">NOAHコミュニティについて</option>
-                <option value="SaaaSについて">SaaaS事業について</option>
-                <option value="その他">その他</option>
+                <option value="SaaaSについて">SaaaS事業（バックオフィス効率化）について</option>
+                <option value="その他">その他・協業のご相談</option>
               </select>
             </div>
 
             <div>
-              <label class="block text-base font-bold text-slate-700 mb-3 ml-2">お問い合わせ内容 <span class="text-pink-500">*</span></label>
-              <textarea rows="6" required class="w-full px-6 py-5 rounded-2xl border border-white/80 focus:ring-2 focus:ring-indigo-500 focus:border-transparent transition-all outline-none bg-white/60 backdrop-blur-sm hover:bg-white/80 font-bold text-slate-800 shadow-sm resize-none text-lg" placeholder="ご質問やご相談内容をご記入ください。"></textarea>
+              <label class="block text-xl font-bold text-slate-700 mb-4 ml-2">お問い合わせ内容 <span class="text-pink-500">*</span></label>
+              <textarea rows="8" required class="w-full px-8 py-6 rounded-3xl border border-white/80 focus:ring-4 focus:ring-indigo-500/50 focus:border-transparent transition-all outline-none bg-white/70 backdrop-blur-md hover:bg-white/90 font-bold text-slate-800 shadow-sm resize-none text-xl leading-relaxed" placeholder="ご質問やご相談内容を詳しくご記入ください。"></textarea>
             </div>
 
-            <div class="pt-8">
-              <button type="submit" class="w-full bg-slate-900 text-white font-extrabold text-xl py-6 px-10 rounded-2xl hover:bg-slate-800 shadow-[0_15px_30px_rgba(0,0,0,0.15)] hover:shadow-[0_20px_40px_rgba(79,70,229,0.3)] transition-all flex justify-center items-center transform hover:-translate-y-1 relative overflow-hidden group">
+            <div class="pt-10">
+              <button type="submit" class="w-full bg-slate-900 text-white font-extrabold text-2xl py-8 px-12 rounded-[2rem] hover:bg-slate-800 shadow-[0_20px_40px_rgba(0,0,0,0.15)] hover:shadow-[0_25px_50px_rgba(79,70,229,0.3)] transition-all flex justify-center items-center transform hover:-translate-y-2 relative overflow-hidden group">
                  <div class="absolute inset-0 h-full w-full bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                 <span class="relative z-10 flex items-center">
-                  送信する <i data-lucide="arrow-right" class="ml-3 group-hover:translate-x-1 transition-transform" style="width: 24px; height: 24px;"></i>
+                  内容を送信する <i data-lucide="arrow-right" class="ml-4 group-hover:translate-x-2 transition-transform" style="width: 28px; height: 28px;"></i>
                 </span>
               </button>
             </div>
@@ -720,53 +732,53 @@
   </main>
 
   <!-- モダンなフッター -->
-  <footer class="relative z-10 bg-white/40 backdrop-blur-3xl border-t border-white/50 pt-24 pb-12 mt-24 shadow-[0_-10px_50px_rgba(0,0,0,0.03)]">
+  <footer class="relative z-10 bg-white/40 backdrop-blur-3xl border-t border-white/50 pt-32 pb-16 mt-32 shadow-[0_-10px_50px_rgba(0,0,0,0.03)]">
     <!-- 画面幅に合わせて％で広がるコンテナ -->
     <div class="w-[92%] xl:w-[88%] max-w-[1920px] mx-auto">
-      <div class="grid grid-cols-1 md:grid-cols-12 gap-16 mb-20">
+      <div class="grid grid-cols-1 md:grid-cols-12 gap-16 xl:gap-24 mb-24">
         <div class="md:col-span-5">
-          <div class="flex items-center mb-8">
+          <div class="flex items-center mb-10">
             <img 
               src="img/logo.png" 
               alt="GRAN NOAHS Logo" 
-              class="h-12 w-auto mr-4 object-contain"
+              class="h-16 w-auto mr-5 object-contain"
               onerror="this.style.display='none';"
             />
-            <span class="text-3xl font-extrabold tracking-tight text-slate-900">GRAN NOAHS</span>
+            <span class="text-4xl font-extrabold tracking-tight text-slate-900">GRAN NOAHS</span>
           </div>
-          <p class="text-slate-600 text-lg leading-relaxed mb-8 max-w-md font-medium">
-            AIデータと行動経済学の力で、持続可能な社会の実現と新しい価値の創造に貢献します。
+          <p class="text-slate-600 text-xl leading-relaxed mb-8 max-w-lg font-medium">
+            AIデータと行動経済学の深い知見を掛け合わせ、地方創生から企業の課題解決まで、持続可能な社会の実現と新しい価値の創造に貢献します。
           </p>
         </div>
         <div class="md:col-span-2 md:col-start-7">
-          <h3 class="text-base font-extrabold text-slate-900 mb-6 tracking-widest uppercase">Links</h3>
-          <ul class="space-y-5">
-            <li><button onclick="navigateTo('home')" class="text-slate-500 hover:text-indigo-600 transition-colors text-base font-bold nav-link-footer" data-nav-target="home">ホーム</button></li>
-            <li><button onclick="navigateTo('services')" class="text-slate-500 hover:text-indigo-600 transition-colors text-base font-bold nav-link-footer" data-nav-target="services">事業内容</button></li>
-            <li><button onclick="navigateTo('ai-partner')" class="text-slate-500 hover:text-indigo-600 transition-colors text-base font-bold nav-link-footer" data-nav-target="ai-partner">AIデジタル相棒</button></li>
-            <li><button onclick="navigateTo('about')" class="text-slate-500 hover:text-indigo-600 transition-colors text-base font-bold nav-link-footer" data-nav-target="about">会社概要</button></li>
+          <h3 class="text-xl font-extrabold text-slate-900 mb-8 tracking-widest uppercase">Links</h3>
+          <ul class="space-y-6">
+            <li><button onclick="navigateTo('home')" class="text-slate-500 hover:text-indigo-600 transition-colors text-lg font-bold nav-link-footer" data-nav-target="home">ホーム</button></li>
+            <li><button onclick="navigateTo('services')" class="text-slate-500 hover:text-indigo-600 transition-colors text-lg font-bold nav-link-footer" data-nav-target="services">事業内容</button></li>
+            <li><button onclick="navigateTo('ai-partner')" class="text-slate-500 hover:text-indigo-600 transition-colors text-lg font-bold nav-link-footer" data-nav-target="ai-partner">AIデジタル相棒</button></li>
+            <li><button onclick="navigateTo('about')" class="text-slate-500 hover:text-indigo-600 transition-colors text-lg font-bold nav-link-footer" data-nav-target="about">会社概要</button></li>
           </ul>
         </div>
         <div class="md:col-span-4">
-          <h3 class="text-base font-extrabold text-slate-900 mb-6 tracking-widest uppercase">Contact</h3>
-          <ul class="space-y-5">
-            <li class="flex items-start text-slate-600 text-base font-bold bg-white/50 p-4 rounded-xl border border-white/60 shadow-sm">
-              <i data-lucide="map-pin" class="mr-3 mt-1 flex-shrink-0 text-indigo-500" style="width: 20px; height: 20px;"></i>
+          <h3 class="text-xl font-extrabold text-slate-900 mb-8 tracking-widest uppercase">Contact</h3>
+          <ul class="space-y-6">
+            <li class="flex items-start text-slate-700 text-lg font-bold bg-white/60 p-5 rounded-2xl border border-white/80 shadow-sm">
+              <i data-lucide="map-pin" class="mr-4 mt-1 flex-shrink-0 text-indigo-500" style="width: 24px; height: 24px;"></i>
               <span>愛知県名古屋市西区花の木</span>
             </li>
             <li>
-              <button onclick="navigateTo('contact')" class="w-full flex items-center justify-between text-slate-900 font-bold group mt-5 bg-white hover:bg-slate-50 p-5 rounded-2xl border border-slate-200 shadow-sm hover:shadow-md transition-all text-lg">
+              <button onclick="navigateTo('contact')" class="w-full flex items-center justify-between text-slate-900 font-bold group mt-6 bg-white hover:bg-slate-50 p-6 rounded-[1.5rem] border border-slate-200 shadow-md hover:shadow-lg transition-all text-xl">
                 <span class="flex items-center">
-                  <i data-lucide="mail" class="mr-3 text-indigo-500" style="width: 20px; height: 20px;"></i>
+                  <i data-lucide="mail" class="mr-4 text-indigo-500" style="width: 24px; height: 24px;"></i>
                   お問い合わせフォーム
                 </span>
-                <i data-lucide="arrow-up-right" class="text-slate-400 group-hover:text-indigo-600 group-hover:translate-x-1 group-hover:-translate-y-1 transition-all" style="width: 20px; height: 20px;"></i>
+                <i data-lucide="arrow-up-right" class="text-slate-400 group-hover:text-indigo-600 group-hover:translate-x-1 group-hover:-translate-y-1 transition-all" style="width: 24px; height: 24px;"></i>
               </button>
             </li>
           </ul>
         </div>
       </div>
-      <div class="flex flex-col md:flex-row justify-between items-center pt-10 border-t border-slate-200/60 text-base text-slate-500 font-bold">
+      <div class="flex flex-col md:flex-row justify-between items-center pt-12 border-t border-slate-300/50 text-lg text-slate-500 font-bold">
         <p>&copy; <span id="current-year"></span> GRAN NOAHS Co., Ltd. All rights reserved.</p>
       </div>
     </div>
