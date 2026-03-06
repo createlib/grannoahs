@@ -241,27 +241,7 @@
               <div class="absolute right-10 bottom-10 w-64 h-64 bg-gradient-to-br from-indigo-400 to-pink-400 rounded-full blur-3xl opacity-20 group-hover:opacity-40 transition-opacity duration-500"></div>
             </div>
 
-            <!-- 2. 地方創生 -->
-            <div 
-              onclick="navigateTo('services')"
-              class="group glass-card rounded-[3rem] p-12 lg:p-16 hover-lift cursor-pointer flex flex-col min-h-[500px] relative overflow-hidden"
-            >
-              <div class="absolute top-0 right-0 w-40 h-40 bg-emerald-400/10 rounded-full blur-2xl z-0 group-hover:scale-150 transition-transform duration-500"></div>
-              <div class="relative z-10 flex flex-col h-full">
-                <div class="w-20 h-20 rounded-[2rem] bg-white border border-slate-100 shadow-sm flex items-center justify-center mb-8 group-hover:-translate-y-2 transition-transform duration-300">
-                  <i data-lucide="leaf" class="text-emerald-500" style="width: 40px; height: 40px;"></i>
-                </div>
-                <h3 class="text-3xl xl:text-4xl font-extrabold text-slate-900 mb-6 tracking-tight">地方創生事業</h3>
-                <p class="text-slate-600 text-xl leading-relaxed mb-8 flex-grow font-medium">
-                  古民家などの地域資源を活用した施設設計と、独自のシステム開発。地方に新たな雇用と人の流れを創り出します。
-                </p>
-                <div class="mt-auto inline-flex items-center text-lg font-bold text-slate-500 group-hover:text-emerald-600 transition-colors">
-                  詳しく <i data-lucide="arrow-right" class="ml-2 group-hover:translate-x-1 transition-transform" style="width: 20px; height: 20px;"></i>
-                </div>
-              </div>
-            </div>
-
-            <!-- 3. コミュニティ -->
+            <!-- 2. コミュニティ -->
             <div 
               onclick="window.open('https://noonealonehere.pages.dev/', '_blank', 'noopener,noreferrer')"
               class="group glass-card rounded-[3rem] p-12 lg:p-16 hover-lift cursor-pointer flex flex-col min-h-[500px] relative overflow-hidden"
@@ -281,7 +261,7 @@
               </div>
             </div>
 
-            <!-- 4. SaaaS -->
+            <!-- 3. SaaaS -->
             <div 
               onclick="navigateTo('services')"
               class="lg:col-span-2 group glass-card-dark rounded-[3rem] p-12 lg:p-16 hover-lift cursor-pointer flex flex-col md:flex-row items-start md:items-center justify-between gap-10 min-h-[450px] overflow-hidden relative"
@@ -300,6 +280,26 @@
                  <div class="inline-flex items-center justify-center w-24 h-24 rounded-full bg-white text-slate-900 group-hover:bg-indigo-500 group-hover:text-white transition-colors duration-300 shadow-xl">
                    <i data-lucide="arrow-up-right" class="group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" style="width: 40px; height: 40px;"></i>
                  </div>
+              </div>
+            </div>
+
+            <!-- 4. 地方創生 -->
+            <div 
+              onclick="navigateTo('services')"
+              class="group glass-card rounded-[3rem] p-12 lg:p-16 hover-lift cursor-pointer flex flex-col min-h-[500px] relative overflow-hidden"
+            >
+              <div class="absolute top-0 right-0 w-40 h-40 bg-emerald-400/10 rounded-full blur-2xl z-0 group-hover:scale-150 transition-transform duration-500"></div>
+              <div class="relative z-10 flex flex-col h-full">
+                <div class="w-20 h-20 rounded-[2rem] bg-white border border-slate-100 shadow-sm flex items-center justify-center mb-8 group-hover:-translate-y-2 transition-transform duration-300">
+                  <i data-lucide="leaf" class="text-emerald-500" style="width: 40px; height: 40px;"></i>
+                </div>
+                <h3 class="text-3xl xl:text-4xl font-extrabold text-slate-900 mb-6 tracking-tight">地方創生事業</h3>
+                <p class="text-slate-600 text-xl leading-relaxed mb-8 flex-grow font-medium">
+                  古民家などの地域資源を活用した施設設計と、独自のシステム開発。地方に新たな雇用と人の流れを創り出します。
+                </p>
+                <div class="mt-auto inline-flex items-center text-lg font-bold text-slate-500 group-hover:text-emerald-600 transition-colors">
+                  詳しく <i data-lucide="arrow-right" class="ml-2 group-hover:translate-x-1 transition-transform" style="width: 20px; height: 20px;"></i>
+                </div>
               </div>
             </div>
           </div>
@@ -482,43 +482,8 @@
           <div class="w-40 h-2 bg-slate-200 rounded-full"></div>
         </div>
 
-        <!-- 地方創生 -->
-        <div class="flex flex-col lg:flex-row gap-20 xl:gap-24 items-center">
-          <div class="w-full lg:w-1/2">
-            <div class="w-24 h-24 rounded-[2rem] bg-emerald-100 flex items-center justify-center mb-10">
-              <i data-lucide="leaf" class="text-emerald-600" style="width: 48px; height: 48px;"></i>
-            </div>
-            <h2 class="text-5xl font-extrabold text-slate-900 mb-6 tracking-tight">地方創生事業</h2>
-            <h3 class="text-3xl font-bold text-emerald-500 mb-10">古民家 × システム開発</h3>
-            <p class="text-slate-600 text-xl xl:text-2xl leading-relaxed mb-10 font-medium">
-              日本各地に眠る「古民家」などの地域資源を、現代のニーズに合わせたサービス施設として再生します。
-            </p>
-            <p class="text-slate-600 text-xl xl:text-2xl leading-relaxed mb-10 font-medium">
-              空間設計に留まらず、施設の運営を効率化し顧客体験を向上させるための「専用システム開発」までを一貫して提供します。
-            </p>
-            <ul class="space-y-6 mt-12 glass-card p-10 rounded-[2.5rem] border-none">
-              <li class="flex items-center text-slate-800 text-xl font-bold">
-                <div class="w-3 h-3 rounded-full bg-emerald-500 mr-6"></div>
-                古民家などの遊休資産を活用した複合施設の企画・設計
-              </li>
-              <li class="flex items-center text-slate-800 text-xl font-bold">
-                <div class="w-3 h-3 rounded-full bg-emerald-500 mr-6"></div>
-                施設運営を効率化する独自システム・アプリの開発
-              </li>
-            </ul>
-          </div>
-          <div class="w-full lg:w-1/2">
-            <div class="aspect-[4/3] rounded-[4rem] bg-gradient-to-br from-emerald-50 to-teal-100 border-2 border-white shadow-2xl flex items-center justify-center relative overflow-hidden group w-full">
-              <div class="w-32 h-32 rounded-full bg-white/50 backdrop-blur-md flex items-center justify-center shadow-xl group-hover:scale-110 transition-transform cursor-pointer">
-                 <i data-lucide="play" class="text-emerald-600 ml-3" style="width: 56px; height: 56px;"></i>
-              </div>
-              <span class="absolute bottom-10 font-bold text-emerald-800/50 text-2xl">[ Regional Innovation Concept ]</span>
-            </div>
-          </div>
-        </div>
-
         <!-- コミュニティ -->
-        <div class="flex flex-col lg:flex-row-reverse gap-20 xl:gap-24 items-center">
+        <div class="flex flex-col lg:flex-row gap-20 xl:gap-24 items-center">
           <div class="w-full lg:w-1/2">
             <div class="w-24 h-24 rounded-[2rem] bg-orange-100 flex items-center justify-center mb-10">
               <i data-lucide="users" class="text-orange-600" style="width: 48px; height: 48px;"></i>
@@ -548,7 +513,7 @@
         </div>
 
         <!-- SaaaS -->
-        <div class="flex flex-col lg:flex-row gap-20 xl:gap-24 items-center">
+        <div class="flex flex-col lg:flex-row-reverse gap-20 xl:gap-24 items-center">
           <div class="w-full lg:w-1/2">
              <div class="w-24 h-24 rounded-[2rem] bg-indigo-100 flex items-center justify-center mb-10">
               <i data-lucide="monitor-check" class="text-indigo-600" style="width: 48px; height: 48px;"></i>
@@ -581,6 +546,41 @@
                    </div>
                  </div>
                </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 地方創生 -->
+        <div class="flex flex-col lg:flex-row gap-20 xl:gap-24 items-center">
+          <div class="w-full lg:w-1/2">
+            <div class="w-24 h-24 rounded-[2rem] bg-emerald-100 flex items-center justify-center mb-10">
+              <i data-lucide="leaf" class="text-emerald-600" style="width: 48px; height: 48px;"></i>
+            </div>
+            <h2 class="text-5xl font-extrabold text-slate-900 mb-6 tracking-tight">地方創生事業</h2>
+            <h3 class="text-3xl font-bold text-emerald-500 mb-10">古民家 × システム開発</h3>
+            <p class="text-slate-600 text-xl xl:text-2xl leading-relaxed mb-10 font-medium">
+              日本各地に眠る「古民家」などの地域資源を、現代のニーズに合わせたサービス施設として再生します。
+            </p>
+            <p class="text-slate-600 text-xl xl:text-2xl leading-relaxed mb-10 font-medium">
+              空間設計に留まらず、施設の運営を効率化し顧客体験を向上させるための「専用システム開発」までを一貫して提供します。
+            </p>
+            <ul class="space-y-6 mt-12 glass-card p-10 rounded-[2.5rem] border-none">
+              <li class="flex items-center text-slate-800 text-xl font-bold">
+                <div class="w-3 h-3 rounded-full bg-emerald-500 mr-6"></div>
+                古民家などの遊休資産を活用した複合施設の企画・設計
+              </li>
+              <li class="flex items-center text-slate-800 text-xl font-bold">
+                <div class="w-3 h-3 rounded-full bg-emerald-500 mr-6"></div>
+                施設運営を効率化する独自システム・アプリの開発
+              </li>
+            </ul>
+          </div>
+          <div class="w-full lg:w-1/2">
+            <div class="aspect-[4/3] rounded-[4rem] bg-gradient-to-br from-emerald-50 to-teal-100 border-2 border-white shadow-2xl flex items-center justify-center relative overflow-hidden group w-full">
+              <div class="w-32 h-32 rounded-full bg-white/50 backdrop-blur-md flex items-center justify-center shadow-xl group-hover:scale-110 transition-transform cursor-pointer">
+                 <i data-lucide="play" class="text-emerald-600 ml-3" style="width: 56px; height: 56px;"></i>
+              </div>
+              <span class="absolute bottom-10 font-bold text-emerald-800/50 text-2xl">[ Regional Innovation Concept ]</span>
             </div>
           </div>
         </div>
