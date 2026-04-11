@@ -1,0 +1,139 @@
+---
+---
+<!-- グラスモーフィズムヘッダー -->
+<header id="main-header" class="fixed top-0 w-full z-50 transition-all duration-500 py-3 md:py-5">
+  <div class="w-[96%] xl:w-[88%] max-w-[1920px] mx-auto">
+    <div id="header-inner" class="flex justify-between items-center transition-all duration-500 rounded-full px-4 md:px-6 py-2 md:py-3 bg-transparent">
+      <!-- ロゴ -->
+      <a href="/" class="flex-shrink-0 flex items-center cursor-pointer group">
+        <img 
+          src="/img/logo.png" 
+          alt="GRAN NOAHS Logo" 
+          class="h-8 md:h-10 w-auto mr-2 md:mr-3 object-contain flex-shrink-0 group-hover:scale-105 transition-transform duration-300"
+          onerror="this.style.display='none';"
+        />
+        <img 
+          src="/img/typo.png" 
+          alt="GRAN NOAHS" 
+          class="h-6 md:h-8 w-auto object-contain flex-shrink-0 transition-all duration-300 group-hover:opacity-80"
+          onerror="this.style.display='none'; this.nextElementSibling.style.display='inline';"
+        />
+        <span class="hidden text-lg md:text-2xl font-extrabold tracking-tight text-slate-900 group-hover:gradient-text transition-all duration-300">GRAN NOAHS</span>
+      </a>
+
+      <!-- PCナビゲーション -->
+      <nav class="hidden md:flex space-x-8 xl:space-x-12 items-center">
+        <a href="/" class="nav-link text-base xl:text-lg font-bold transition-all hover:text-indigo-600 text-slate-600" data-path="/">ホーム</a>
+        <a href="/services" class="nav-link text-base xl:text-lg font-bold transition-all hover:text-indigo-600 text-slate-600" data-path="/services">事業内容</a>
+        <a href="/ai-partner" class="nav-link text-base xl:text-lg font-bold transition-all hover:text-indigo-600 flex items-center gap-1.5 text-slate-600" data-path="/ai-partner">
+          <i data-lucide="sparkles" class="text-slate-400" style="width: 18px; height: 18px;"></i> 
+          <span>AIデジタル相棒</span>
+        </a>
+        <a href="/about" class="nav-link text-base xl:text-lg font-bold transition-all hover:text-indigo-600 text-slate-600" data-path="/about">会社概要</a>
+      </nav>
+
+      <!-- お問い合わせボタン (PC) -->
+      <div class="hidden md:block">
+        <a 
+          href="/contact" 
+          class="inline-block relative overflow-hidden group text-base xl:text-lg font-bold px-8 py-3.5 rounded-full bg-slate-900 text-white shadow-lg hover:shadow-indigo-500/30 transition-all duration-300"
+        >
+          <span class="relative z-10">お問い合わせ</span>
+          <div class="absolute inset-0 h-full w-full bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+        </a>
+      </div>
+
+      <!-- モバイルメニューボタン -->
+      <div class="md:hidden flex items-center">
+        <button id="mobile-menu-btn" class="text-slate-900 p-2">
+          <i id="menu-icon" data-lucide="menu" style="width: 24px; height: 24px;"></i>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- モバイルナビゲーション -->
+  <div id="mobile-menu" class="md:hidden absolute top-[calc(100%+10px)] left-4 right-4 glass-card rounded-2xl transition-all duration-400 overflow-hidden origin-top scale-y-0 opacity-0">
+    <div class="flex flex-col space-y-3 px-5 py-6">
+      <a href="/" class="nav-link mobile-link text-base font-bold transition-all hover:text-indigo-600 text-slate-600 text-left" data-path="/">ホーム</a>
+      <a href="/services" class="nav-link mobile-link text-base font-bold transition-all hover:text-indigo-600 text-slate-600 text-left" data-path="/services">事業内容</a>
+      <a href="/ai-partner" class="nav-link mobile-link text-base font-bold transition-all hover:text-indigo-600 flex items-center gap-1.5 text-slate-600 text-left" data-path="/ai-partner">
+        <i data-lucide="sparkles" class="text-slate-400" style="width: 16px; height: 16px;"></i> 
+        <span>AIデジタル相棒</span>
+      </a>
+      <a href="/about" class="nav-link mobile-link text-base font-bold transition-all hover:text-indigo-600 text-slate-600 text-left" data-path="/about">会社概要</a>
+      
+      <div class="pt-4 mt-2 border-t border-slate-200/50">
+        <a href="/contact" class="block w-full text-center text-base font-bold px-6 py-3 rounded-xl bg-gradient-to-r from-indigo-500 to-pink-500 text-white shadow-md">
+          お問い合わせ
+        </a>
+      </div>
+    </div>
+  </div>
+</header>
+
+<script>
+  document.addEventListener('astro:page-load', () => {
+    // ヘッダーのスクロール検知
+    const header = document.getElementById('main-header');
+    const headerInner = document.getElementById('header-inner');
+    
+    if (header && headerInner) {
+      window.addEventListener('scroll', () => {
+        if (window.scrollY > 20) {
+          header.classList.remove('py-3', 'md:py-5');
+          header.classList.add('py-2', 'md:py-3');
+          headerInner.classList.remove('bg-transparent');
+          headerInner.classList.add('glass-card');
+        } else {
+          header.classList.add('py-3', 'md:py-5');
+          header.classList.remove('py-2', 'md:py-3');
+          headerInner.classList.add('bg-transparent');
+          headerInner.classList.remove('glass-card');
+        }
+      });
+    }
+
+    // モバイルメニューの制御
+    const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const menuIcon = document.getElementById('menu-icon');
+    let isMenuOpen = false;
+
+    if (mobileMenuBtn && mobileMenu && menuIcon) {
+      mobileMenuBtn.addEventListener('click', () => {
+        isMenuOpen = !isMenuOpen;
+        if (isMenuOpen) {
+          mobileMenu.classList.remove('scale-y-0', 'opacity-0');
+          mobileMenu.classList.add('scale-y-100', 'opacity-100');
+          menuIcon.setAttribute('data-lucide', 'x');
+        } else {
+          mobileMenu.classList.remove('scale-y-100', 'opacity-100');
+          mobileMenu.classList.add('scale-y-0', 'opacity-0');
+          menuIcon.setAttribute('data-lucide', 'menu');
+        }
+        try { lucide.createIcons(); } catch(e) {}
+      });
+    }
+
+    // カレントリンクのハイライト
+    const currentPath = window.location.pathname;
+    document.querySelectorAll('.nav-link').forEach(link => {
+      const path = link.getAttribute('data-path');
+      if (currentPath === path || (path !== '/' && currentPath.startsWith(path))) {
+        link.classList.add('text-indigo-600');
+        link.classList.remove('text-slate-600');
+        const icon = link.querySelector('[data-lucide="sparkles"]');
+        if(icon) {
+          icon.classList.remove('text-slate-400');
+          icon.classList.add('text-pink-500');
+        }
+      } else {
+        link.classList.remove('text-indigo-600');
+        link.classList.add('text-slate-600');
+      }
+    });
+
+    try { lucide.createIcons(); } catch(e) {}
+  });
+</script>

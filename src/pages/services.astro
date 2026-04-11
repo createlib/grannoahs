@@ -1,0 +1,120 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<Layout title="事業内容 | GRAN NOAHS">
+  <Header slot="header" />
+  
+  <div class="page-content active fade-in">
+    <div class="pt-16 sm:pt-24 md:pt-32 pb-16 md:pb-24 text-center px-4 relative">
+      <h1 class="text-4xl sm:text-5xl md:text-7xl font-extrabold tracking-tight text-slate-900 mb-4 md:mb-6 leading-tight">事業内容</h1>
+      <p class="text-base sm:text-xl md:text-2xl text-slate-600 max-w-2xl mx-auto font-medium">テクノロジーと人の温もりを掛け合わせ、多角的なアクションで社会に貢献します。</p>
+    </div>
+
+    <div class="w-[92%] xl:w-[88%] max-w-[1920px] mx-auto pb-20 md:pb-40">
+      <div class="flex flex-col gap-12 md:gap-24 xl:gap-32">
+        <!-- AI事業 -->
+        <div class="group">
+          <div class="flex items-center gap-4 md:gap-6 mb-6 md:mb-10 pl-2">
+            <h2 class="text-2xl sm:text-4xl md:text-5xl font-extrabold text-slate-900 tracking-tight flex items-center">
+              <span class="text-indigo-600 mr-2 md:mr-4 font-black">01</span> AIデータを活用した社会課題解決事業
+            </h2>
+          </div>
+          <div class="glass-card rounded-[2rem] md:rounded-[3rem] p-6 md:p-12 lg:p-16 hover-lift">
+             <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-16 items-center">
+               <div>
+                  <h3 class="text-xl sm:text-2xl md:text-3xl font-bold text-slate-900 mb-4 md:mb-6">あなたの「思考」をデジタル化し、<br class="hidden md:block"/>組織の最適化と個の実現をサポート</h3>
+                  <p class="text-slate-600 mb-6 md:mb-8 text-sm sm:text-base md:text-lg leading-relaxed font-medium">
+                    個人の「人格DNA」と組織の「環境DNA」を分析・シミュレーションすることで、あなた専属のAIデジタル相棒を構築します。採用のマッチング精度向上、社内コミュニケーションの円滑化、そして究極的には「もう一人の自分」としての自律的なサポートまで。<br /><br />
+                    デジタルとリアルが融合する新しい形の自己実現と組織づくりを提案します。
+                  </p>
+                  <a href="/ai-partner" class="inline-flex items-center text-indigo-600 hover:text-indigo-700 font-bold text-sm sm:text-base md:text-lg">
+                    デジタル相棒の詳細を見る <i data-lucide="arrow-right" class="ml-2" style="width: 18px; height: 18px;"></i>
+                  </a>
+               </div>
+               <div class="bg-gradient-to-br from-indigo-100 to-purple-100 rounded-2xl md:rounded-[2rem] p-6 md:p-10 flex items-center justify-center aspect-video md:aspect-square lg:aspect-auto h-full">
+                 <i data-lucide="bot" class="text-indigo-500 w-16 h-16 md:w-32 md:h-32 drop-shadow-lg group-hover:scale-110 transition-transform"></i>
+               </div>
+             </div>
+          </div>
+        </div>
+
+        <!-- コミュニティ事業 -->
+        <div class="group">
+          <div class="flex items-center gap-4 md:gap-6 mb-6 md:mb-10 pl-2">
+            <h2 class="text-2xl sm:text-4xl md:text-5xl font-extrabold text-slate-900 tracking-tight flex items-center">
+              <span class="text-orange-500 mr-2 md:mr-4 font-black">02</span> 次世代コミュニティ事業
+            </h2>
+          </div>
+          <div class="glass-card rounded-[2rem] md:rounded-[3rem] p-6 md:p-12 lg:p-16 hover-lift">
+             <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-16 items-center">
+               <div class="lg:order-2">
+                  <h3 class="text-xl sm:text-2xl md:text-3xl font-bold text-slate-900 mb-4 md:mb-6">心理的安全性と挑戦が共存する、<br class="hidden md:block"/>「NOAHコミュニティ」</h3>
+                  <p class="text-slate-600 mb-6 md:mb-8 text-sm sm:text-base md:text-lg leading-relaxed font-medium">
+                    多種多様なスキルを持つ人材が集い、プロジェクトベースで価値を創造する実践的コミュニティ「NOAH」を運営しています。<br /><br />
+                    AIを活用したマッチングや、失敗を恐れずに挑戦できる心理的安全性の高い土壌づくりに注力し、個人のスキルアップと社会課題解決を同時に達成する場を提供しています。
+                  </p>
+                  <a href="https://noonealonehere.pages.dev/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center text-orange-600 hover:text-orange-700 font-bold text-sm sm:text-base md:text-lg">
+                    NOAHコミュニティへ <i data-lucide="external-link" class="ml-2" style="width: 18px; height: 18px;"></i>
+                  </a>
+               </div>
+               <div class="lg:order-1 bg-gradient-to-br from-orange-100 to-amber-100 rounded-2xl md:rounded-[2rem] p-6 md:p-10 flex items-center justify-center aspect-video md:aspect-square lg:aspect-auto h-full">
+                 <i data-lucide="users" class="text-orange-500 w-16 h-16 md:w-32 md:h-32 drop-shadow-lg group-hover:scale-110 transition-transform"></i>
+               </div>
+             </div>
+          </div>
+        </div>
+
+        <!-- SaaaS事業 -->
+        <div class="group">
+          <div class="flex items-center gap-4 md:gap-6 mb-6 md:mb-10 pl-2">
+            <h2 class="text-2xl sm:text-4xl md:text-5xl font-extrabold text-slate-900 tracking-tight flex items-center">
+              <span class="text-pink-500 mr-2 md:mr-4 font-black">03</span> SaaaS事業（バックオフィス効率化）
+            </h2>
+          </div>
+          <div class="glass-card rounded-[2rem] md:rounded-[3rem] p-6 md:p-12 lg:p-16 hover-lift border-pink-100 shadow-[0_10px_40px_rgba(236,72,153,0.05)]">
+             <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-16 items-center">
+               <div>
+                  <h3 class="text-xl sm:text-2xl md:text-3xl font-bold text-slate-900 mb-4 md:mb-6">コア業務に集中するための<br class="hidden md:block"/>究極のバックエンド支援</h3>
+                  <p class="text-slate-600 mb-6 md:mb-8 text-sm sm:text-base md:text-lg leading-relaxed font-medium">
+                    Software as a Service と Human as a Service を掛け合わせた「SaaaS」。経理・人事・総務などの煩雑なバックオフィス業務を、最新のデジタルツールの導入支援からBPO（業務委託）まで一気通貫でサポート。<br /><br />
+                    無駄をなくし、スタートアップや中小企業が「本当に価値を生み出すコア業務」に100%没頭できる環境を構築します。
+                  </p>
+               </div>
+               <div class="bg-gradient-to-br from-pink-100 to-rose-100 rounded-2xl md:rounded-[2rem] p-6 md:p-10 flex items-center justify-center aspect-video md:aspect-square lg:aspect-auto h-full">
+                 <i data-lucide="monitor-check" class="text-pink-500 w-16 h-16 md:w-32 md:h-32 drop-shadow-lg group-hover:scale-110 transition-transform"></i>
+               </div>
+             </div>
+          </div>
+        </div>
+
+        <!-- 地方創生事業 -->
+        <div class="group">
+          <div class="flex items-center gap-4 md:gap-6 mb-6 md:mb-10 pl-2">
+            <h2 class="text-2xl sm:text-4xl md:text-5xl font-extrabold text-slate-900 tracking-tight flex items-center">
+              <span class="text-emerald-500 mr-2 md:mr-4 font-black">04</span> 地方創生事業
+            </h2>
+          </div>
+          <div class="glass-card rounded-[2rem] md:rounded-[3rem] p-6 md:p-12 lg:p-16 hover-lift border-emerald-100 shadow-[0_10px_40px_rgba(16,185,129,0.05)]">
+             <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-16 items-center">
+               <div class="lg:order-2">
+                  <h3 class="text-xl sm:text-2xl md:text-3xl font-bold text-slate-900 mb-4 md:mb-6">地域資源×テクノロジーで<br class="hidden md:block"/>持続可能なローカル経済システムを</h3>
+                  <p class="text-slate-600 text-sm sm:text-base md:text-lg leading-relaxed font-medium">
+                    消滅可能性都市などの日本各地の課題に対し、システム開発から施設の設計（古民家再生など）・運営まで、実体の伴うアプローチを行います。<br /><br />
+                    地域のポテンシャルをテクノロジーで可視化・最適化し、雇用創出と新しい人の流れ（関係人口）を生み出すことで、真に持続可能な地方創生モデルを構築しています。
+                  </p>
+               </div>
+               <div class="lg:order-1 bg-gradient-to-br from-emerald-100 to-teal-100 rounded-2xl md:rounded-[2rem] p-6 md:p-10 flex items-center justify-center aspect-video md:aspect-square lg:aspect-auto h-full">
+                 <i data-lucide="leaf" class="text-emerald-500 w-16 h-16 md:w-32 md:h-32 drop-shadow-lg group-hover:scale-110 transition-transform"></i>
+               </div>
+             </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <Footer slot="footer" />
+</Layout>

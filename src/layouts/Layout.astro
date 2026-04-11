@@ -1,0 +1,66 @@
+---
+import { ClientRouter } from 'astro:transitions';
+import '../styles/global.css';
+
+interface Props {
+  title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="株式会社GRAN NOAHSは、AIデータに基づくデジタル相棒の開発、地方創生、コミュニティ運営、バックオフィス効率化などを手掛け、新しい社会の形を創るスタートアップです。" />
+    <meta name="keywords" content="AI,デジタル相棒,地方創生,NOAHコミュニティ,バックオフィス効率化,GRAN NOAHS" />
+    
+    <!-- OGP / Twitter Cards -->
+    <meta property="og:title" content="株式会社GRAN NOAHS コーポレートサイト" />
+    <meta property="og:description" content="AIデータと行動経済学の深い知見を掛け合わせ、地方創生から企業の課題解決まで、持続可能な社会の実現と新しい価値の創造に貢献します。" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://grannoahs.com/" />
+    <meta property="og:image" content="https://grannoahs.com/img/logo.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <link rel="icon" href="/img/logo.png" />
+    <title>{title}</title>
+    
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest" is:inline></script>
+    <ClientRouter />
+    
+    <!-- アイコンの初期化 -->
+    <script is:inline>
+      document.addEventListener('astro:page-load', () => {
+        try {
+          lucide.createIcons();
+        } catch(e) {}
+      });
+    </script>
+  </head>
+  <body class="min-h-screen flex flex-col font-sans text-slate-800 bg-[#F8FAFC] selection:bg-indigo-200 selection:text-indigo-900 overflow-x-hidden relative">
+    
+    <!-- 共通の動的オーロラ背景 -->
+    <div class="fixed inset-0 z-0 overflow-hidden pointer-events-none">
+      <div class="absolute top-[-10%] left-[-10%] w-[50%] h-[50%] rounded-full bg-indigo-400/20 blur-[120px] animate-blob"></div>
+      <div class="absolute top-[20%] right-[-10%] w-[40%] h-[60%] rounded-full bg-fuchsia-400/20 blur-[120px] animate-blob animation-delay-2000"></div>
+      <div class="absolute bottom-[-20%] left-[20%] w-[60%] h-[50%] rounded-full bg-pink-400/20 blur-[120px] animate-blob animation-delay-4000"></div>
+    </div>
+
+    <!-- コンポーネント用のプレースホルダ枠（Header） -->
+    <slot name="header" />
+
+    <main class="flex-grow pt-24 md:pt-28 relative z-10">
+      <div class="page-content">
+        <slot />
+      </div>
+    </main>
+
+    <!-- コンポーネント用のプレースホルダ枠（Footer） -->
+    <slot name="footer" />
+
+  </body>
+</html>

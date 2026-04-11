@@ -1,0 +1,71 @@
+---
+---
+<!-- モダンなフッター -->
+<footer class="relative z-10 bg-white/40 backdrop-blur-3xl border-t border-white/50 pt-20 md:pt-32 pb-10 md:pb-16 mt-20 md:mt-32 shadow-[0_-10px_50px_rgba(0,0,0,0.03)]">
+  <div class="w-[92%] xl:w-[88%] max-w-[1920px] mx-auto">
+    <div class="grid grid-cols-1 md:grid-cols-12 gap-10 md:gap-16 xl:gap-24 mb-16 md:mb-24">
+      <div class="md:col-span-5">
+        <div class="flex items-center mb-6 md:mb-10">
+          <img 
+            src="/img/logo.png" 
+            alt="GRAN NOAHS Logo" 
+            loading="lazy"
+            class="h-10 md:h-16 w-auto mr-3 md:mr-5 object-contain flex-shrink-0"
+            onerror="this.style.display='none';"
+          />
+          <img 
+            src="/img/typo.png" 
+            alt="GRAN NOAHS" 
+            loading="lazy"
+            class="h-8 md:h-12 w-auto object-contain flex-shrink-0"
+            onerror="this.style.display='none'; this.nextElementSibling.style.display='inline';"
+          />
+          <span class="hidden text-2xl md:text-4xl font-extrabold tracking-tight text-slate-900">GRAN NOAHS</span>
+        </div>
+        <p class="text-slate-600 text-sm md:text-xl leading-relaxed mb-8 max-w-lg font-medium">
+          AIデータと行動経済学の深い知見を掛け合わせ、地方創生から企業の課題解決まで、持続可能な社会の実現と新しい価値の創造に貢献します。
+        </p>
+      </div>
+      <div class="md:col-span-2 md:col-start-7">
+        <h3 class="text-base md:text-xl font-extrabold text-slate-900 mb-6 md:mb-8 tracking-widest uppercase">Links</h3>
+        <ul class="space-y-4 md:space-y-6">
+          <li><a href="/" class="text-slate-500 hover:text-indigo-600 transition-colors text-sm md:text-lg font-bold">ホーム</a></li>
+          <li><a href="/services" class="text-slate-500 hover:text-indigo-600 transition-colors text-sm md:text-lg font-bold">事業内容</a></li>
+          <li><a href="/ai-partner" class="text-slate-500 hover:text-indigo-600 transition-colors text-sm md:text-lg font-bold">AIデジタル相棒</a></li>
+          <li><a href="/about" class="text-slate-500 hover:text-indigo-600 transition-colors text-sm md:text-lg font-bold">会社概要</a></li>
+        </ul>
+      </div>
+      <div class="md:col-span-4">
+        <h3 class="text-base md:text-xl font-extrabold text-slate-900 mb-6 md:mb-8 tracking-widest uppercase">Contact</h3>
+        <ul class="space-y-4 md:space-y-6">
+          <li class="flex items-start text-slate-700 text-sm md:text-lg font-bold bg-white/60 p-4 md:p-5 rounded-xl md:rounded-2xl border border-white/80 shadow-sm">
+            <i data-lucide="map-pin" class="mr-3 md:mr-4 mt-0.5 md:mt-1 flex-shrink-0 text-indigo-500" style="width: 20px; height: 20px;"></i>
+            <span>愛知県名古屋市西区花の木</span>
+          </li>
+          <li>
+            <a href="/contact" class="w-full flex items-center justify-between text-slate-900 font-bold group mt-4 md:mt-6 bg-white hover:bg-slate-50 p-4 md:p-6 rounded-xl md:rounded-[1.5rem] border border-slate-200 shadow-sm md:shadow-md hover:shadow-lg transition-all text-base md:text-xl">
+              <span class="flex items-center">
+                <i data-lucide="mail" class="mr-3 md:mr-4 text-indigo-500" style="width: 20px; height: 20px;"></i>
+                お問い合わせフォーム
+              </span>
+              <i data-lucide="arrow-up-right" class="text-slate-400 group-hover:text-indigo-600 group-hover:translate-x-1 group-hover:-translate-y-1 transition-all" style="width: 20px; height: 20px;"></i>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="flex flex-col lg:flex-row justify-between items-center pt-8 md:pt-12 border-t border-slate-300/50 text-sm md:text-base text-slate-500 font-bold">
+      <div class="flex flex-wrap justify-center gap-4 md:gap-8 mb-6 lg:mb-0">
+        <a href="/privacy" class="hover:text-indigo-600 transition-colors">プライバシーポリシー</a>
+        <a href="/terms" class="hover:text-indigo-600 transition-colors">利用規約</a>
+        <a href="/law" class="hover:text-indigo-600 transition-colors">特定商取引法に基づく表記</a>
+      </div>
+      <p>&copy; <span id="current-year">2026</span> GRAN NOAHS Co., Ltd. All rights reserved.</p>
+    </div>
+  </div>
+</footer>
+<script>
+  document.addEventListener('astro:page-load', () => {
+    document.getElementById('current-year').textContent = new Date().getFullYear();
+  });
+</script>

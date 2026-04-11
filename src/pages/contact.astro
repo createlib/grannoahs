@@ -1,0 +1,158 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<Layout title="お問い合わせ | GRAN NOAHS">
+  <Header slot="header" />
+  
+  <div class="page-content active fade-in">
+    <div class="pt-16 sm:pt-24 md:pt-32 pb-16 md:pb-24 text-center px-4 relative">
+      <h1 class="text-4xl sm:text-5xl md:text-7xl font-extrabold tracking-tight text-slate-900 mb-4 md:mb-6 leading-tight">お問い合わせ</h1>
+      <p class="text-base sm:text-lg md:text-xl text-slate-600 max-w-2xl mx-auto font-medium">各種事業についてのご相談・ご質問など、お気軽にご連絡ください。</p>
+    </div>
+
+    <div class="w-[92%] xl:w-[88%] max-w-[800px] mx-auto pb-20 md:pb-40 relative z-10">
+      
+      <!-- フォーム送信後の成功メッセージ (初期状態は非表示) -->
+      <div id="form-success" class="hidden glass-card rounded-[2rem] p-10 md:p-16 text-center shadow-lg border-emerald-100 transform scale-95 opacity-0 transition-all duration-500">
+        <div class="inline-flex items-center justify-center w-20 h-20 rounded-full bg-emerald-100 text-emerald-600 mb-6">
+          <i data-lucide="check-circle" style="width: 40px; height: 40px;"></i>
+        </div>
+        <h2 class="text-2xl md:text-3xl font-extrabold text-slate-900 mb-4">送信完了しました</h2>
+        <p class="text-slate-600 md:text-lg font-medium mb-8">
+          お問い合わせいただき、誠にありがとうございます。<br />
+          担当者より順次ご連絡させていただきます。
+        </p>
+        <button onclick="window.location.href='/'" class="px-8 py-3 rounded-full bg-slate-900 text-white font-bold hover:bg-slate-800 transition-colors">
+          ホームへ戻る
+        </button>
+      </div>
+
+      <!-- お問い合わせフォーム -->
+      <div id="form-container" class="glass-card rounded-[2rem] md:rounded-[3rem] p-6 sm:p-8 md:p-12 lg:p-16 shadow-[0_20px_50px_rgba(0,0,0,0.05)] transition-all duration-500">
+        
+        <!-- Formspree等のエンドポイントを発行してactionに設定してください -->
+        <form id="contact-form" class="space-y-6 md:space-y-8" method="POST" action="">
+          
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div class="space-y-3">
+              <label for="name" class="block text-sm font-extrabold text-slate-700 uppercase tracking-wider pl-1">お名前 <span class="text-pink-500 ml-1">*</span></label>
+              <input type="text" id="name" name="name" required class="w-full bg-white/70 border border-slate-200 rounded-xl md:rounded-2xl px-5 py-4 focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 outline-none transition-all shadow-sm placeholder:text-slate-400 font-medium" placeholder="山田 太郎">
+            </div>
+            
+            <div class="space-y-3">
+              <label for="email" class="block text-sm font-extrabold text-slate-700 uppercase tracking-wider pl-1">メールアドレス <span class="text-pink-500 ml-1">*</span></label>
+              <input type="email" id="email" name="email" required class="w-full bg-white/70 border border-slate-200 rounded-xl md:rounded-2xl px-5 py-4 focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 outline-none transition-all shadow-sm placeholder:text-slate-400 font-medium" placeholder="mail@example.com">
+            </div>
+          </div>
+
+          <div class="space-y-3">
+            <label for="category" class="block text-sm font-extrabold text-slate-700 uppercase tracking-wider pl-1">ご相談のカテゴリ <span class="text-pink-500 ml-1">*</span></label>
+            <div class="relative">
+              <select id="category" name="category" required class="w-full bg-white/70 border border-slate-200 rounded-xl md:rounded-2xl px-5 py-4 appearance-none focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 outline-none transition-all shadow-sm font-medium text-slate-700 cursor-pointer">
+                <option value="" disabled selected>選択してください</option>
+                <option value="ai-partner">AIデジタル相棒に関するご相談</option>
+                <option value="community">NOAHコミュニティへの参加・連携</option>
+                <option value="bpo">SaaaS（バックオフィス効率化）のご相談</option>
+                <option value="regional">地方創生に関するご相談</option>
+                <option value="other">その他のお問い合わせ</option>
+              </select>
+              <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-5 text-slate-500">
+                <i data-lucide="chevron-down" style="width: 20px; height: 20px;"></i>
+              </div>
+            </div>
+          </div>
+
+          <div class="space-y-3">
+            <label for="message" class="block text-sm font-extrabold text-slate-700 uppercase tracking-wider pl-1">お問い合わせ内容 <span class="text-pink-500 ml-1">*</span></label>
+            <textarea id="message" name="message" rows="6" required class="w-full bg-white/70 border border-slate-200 rounded-xl md:rounded-2xl px-5 py-4 focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 outline-none transition-all shadow-sm placeholder:text-slate-400 font-medium resize-y" placeholder="こちらに詳細をご記入ください..."></textarea>
+          </div>
+
+          <!-- Privecy Policy Check -->
+          <div class="flex items-start pt-2 px-1">
+            <div class="flex items-center h-5">
+              <input id="privacy-check" name="privacy-check" type="checkbox" required class="w-5 h-5 text-indigo-600 bg-white border-slate-300 rounded focus:ring-indigo-500 focus:ring-2 cursor-pointer shadow-sm">
+            </div>
+            <label for="privacy-check" class="ml-3 text-sm text-slate-600 font-medium cursor-pointer leading-tight pt-0.5">
+              <a href="/privacy" target="_blank" class="text-indigo-600 hover:text-indigo-800 underline underline-offset-2">プライバシーポリシー</a>に同意する
+            </label>
+          </div>
+
+          <div class="pt-6">
+            <button type="submit" id="submit-btn" class="w-full flex justify-center items-center px-8 py-5 rounded-xl md:rounded-2xl bg-gradient-to-r from-indigo-600 to-pink-500 text-white font-extrabold text-lg md:text-xl shadow-[0_10px_30px_rgba(79,70,229,0.3)] hover:shadow-[0_15px_40px_rgba(79,70,229,0.4)] transform hover:-translate-y-1 transition-all duration-300 relative overflow-hidden group">
+              <span class="relative z-10 flex items-center">
+                <span>送信する</span>
+                <i data-lucide="send" class="ml-2 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" style="width: 20px; height: 20px;"></i>
+              </span>
+            </button>
+          </div>
+        </form>
+      </div>
+
+    </div>
+  </div>
+
+  <script>
+    document.addEventListener('astro:page-load', () => {
+      const form = document.getElementById('contact-form');
+      if (form) {
+        form.addEventListener('submit', async function(event) {
+          event.preventDefault();
+          const btn = document.getElementById('submit-btn');
+          const originalText = btn.innerHTML;
+          
+          btn.innerHTML = `<span class="relative z-10 flex items-center"><i data-lucide="loader-2" class="animate-spin mr-2" style="width: 20px; height: 20px;"></i> 送信中...</span>`;
+          btn.disabled = true;
+          lucide.createIcons();
+
+          const formElement = event.target;
+          const formData = new FormData(formElement);
+          const actionUrl = formElement.getAttribute('action');
+
+          try {
+            if (actionUrl && actionUrl.trim() !== '') {
+              // 外部APIへ送信
+              const response = await fetch(actionUrl, {
+                method: 'POST',
+                body: formData,
+                headers: { 'Accept': 'application/json' }
+              });
+
+              if (!response.ok) {
+                throw new Error('ネットワークエラーまたは設定エラー');
+              }
+            } else {
+              // action未設定時はモック（テスト用）
+              await new Promise(resolve => setTimeout(resolve, 1500));
+            }
+            
+            // 成功画面の表示
+            const formContainer = document.getElementById('form-container');
+            const successScreen = document.getElementById('form-success');
+            
+            formContainer.classList.add('opacity-0', 'scale-95');
+            setTimeout(() => {
+              formContainer.classList.add('hidden');
+              successScreen.classList.remove('hidden');
+              // trigger reflow
+              void successScreen.offsetWidth;
+              successScreen.classList.remove('opacity-0', 'scale-95');
+              successScreen.classList.add('opacity-100', 'scale-100');
+            }, 500);
+
+          } catch (error) {
+            console.error('Submission error:', error);
+            alert('送信に失敗しました。後ほどもう一度お試しください。');
+            btn.innerHTML = originalText;
+            btn.disabled = false;
+            lucide.createIcons();
+          }
+        });
+      }
+    });
+  </script>
+  
+  <Footer slot="footer" />
+</Layout>

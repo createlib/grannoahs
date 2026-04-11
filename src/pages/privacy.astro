@@ -1,0 +1,44 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<Layout title="プライバシーポリシー | GRAN NOAHS">
+  <Header slot="header" />
+  
+  <div class="page-content active fade-in">
+    <div class="pt-16 sm:pt-24 md:pt-32 pb-16 md:pb-24 text-center px-4 relative">
+      <h1 class="text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tight text-slate-900 mb-4 md:mb-6 leading-tight">プライバシーポリシー</h1>
+    </div>
+
+    <div class="w-[92%] xl:w-[88%] max-w-[800px] mx-auto pb-20 md:pb-40 text-sm md:text-base text-slate-700 leading-loose">
+      <div class="glass-card rounded-[2rem] p-8 md:p-12 mb-10">
+        <p class="mb-6 font-medium">株式会社 GRAN NOAHS（以下「当社」）は、ユーザーの個人情報保護の重要性を強く認識し、以下のプライバシーポリシーに従い、適切な取り扱いと保護に努めます。</p>
+        
+        <h2 class="text-xl font-bold text-slate-900 mt-10 mb-4 pb-2 border-b border-slate-200">1. 個人情報の収集について</h2>
+        <p class="mb-6">当社は、サービスの提供に必要な範囲内で、適法かつ公正な手段により個人情報を収集します。お問い合わせフォームやサービス利用時の入力情報などが該当します。</p>
+
+        <h2 class="text-xl font-bold text-slate-900 mt-10 mb-4 pb-2 border-b border-slate-200">2. 個人情報の利用目的</h2>
+        <p class="mb-4">収集した個人情報は、以下の目的で利用いたします。</p>
+        <ul class="list-disc pl-6 mb-6 space-y-2">
+          <li>お問い合わせへの回答および対応のため</li>
+          <li>当社の提供するサービス、コミュニティの案内や情報提供のため</li>
+          <li>AIデジタル相棒など、提供サービスの精度向上およびシミュレーション（ユーザーの同意を得た範囲内に限る）のため</li>
+          <li>その他、当社の事業活動遂行のため</li>
+        </ul>
+
+        <h2 class="text-xl font-bold text-slate-900 mt-10 mb-4 pb-2 border-b border-slate-200">3. 第三者への提供</h2>
+        <p class="mb-6">当社は、ユーザーの同意がない限り、個人情報をシステム運用に必要な提携先以外の第三者に開示・提供いたしません。ただし、法令等に基づく正当な要請がある場合はこの限りではありません。</p>
+
+        <h2 class="text-xl font-bold text-slate-900 mt-10 mb-4 pb-2 border-b border-slate-200">4. 行動データの取り扱いについて（AI事業等）</h2>
+        <p class="mb-6">AIシミュレーションおよび人格DNA/環境DNAの構築にあたり収集された行動履歴や性格特性データは、厳重に匿名化または暗号化され、本人または所属法人の明示的な同意がある範囲のみで活用されます。</p>
+
+        <h2 class="text-xl font-bold text-slate-900 mt-10 mb-4 pb-2 border-b border-slate-200">5. お問い合わせ窓口</h2>
+        <p class="mb-6">本ポリシーに関するご質問や、個人情報の照会・訂正・削除のご依頼は、お問い合わせフォームよりご連絡ください。</p>
+      </div>
+    </div>
+  </div>
+  
+  <Footer slot="footer" />
+</Layout>
