@@ -1,0 +1,172 @@
+---
+---
+<!-- キャンバスコンテナ -->
+<div class="fixed inset-0 z-0 overflow-hidden pointer-events-none" style="opacity: 0.7;" transition:persist>
+  <canvas id="three-canvas" class="w-full h-full block"></canvas>
+</div>
+
+<script>
+  import * as THREE from 'three';
+
+  let initialized = false;
+
+  const initThreeBg = () => {
+    if (initialized) return;
+    const canvas = document.getElementById('three-canvas') as HTMLCanvasElement;
+    if (!canvas) return;
+    initialized = true;
+
+    // 1. Scene, Camera, Renderer
+    const scene = new THREE.Scene();
+    
+    // 背景色を指定せず透過とし、bodyのbg色が透けるようにする
+    const renderer = new THREE.WebGLRenderer({ canvas, alpha: true, antialias: true });
+    renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2)); // 重い場合は下げられるように調整
+    renderer.setSize(window.innerWidth, window.innerHeight);
+
+    // カメラの初期位置を上空斜めにセット
+    const camera = new THREE.PerspectiveCamera(60, window.innerWidth / window.innerHeight, 1, 1000);
+    camera.position.set(0, 35, 80);
+    camera.lookAt(0, 0, 0);
+
+    // 2. カスタムパーティクル用の丸いテクスチャをcanvasでプログラマブルに生成
+    const circleCanvas = document.createElement('canvas');
+    circleCanvas.width = 64;
+    circleCanvas.height = 64;
+    const ctx = circleCanvas.getContext('2d');
+    if (ctx) {
+      const gradient = ctx.createRadialGradient(32, 32, 0, 32, 32, 32);
+      gradient.addColorStop(0, 'rgba(255,255,255,1)');
+      gradient.addColorStop(0.2, 'rgba(255,255,255,0.8)');
+      gradient.addColorStop(0.4, 'rgba(255,255,255,0.4)');
+      gradient.addColorStop(1, 'rgba(255,255,255,0)');
+      ctx.fillStyle = gradient;
+      ctx.fillRect(0, 0, 64, 64);
+    }
+    const texture = new THREE.CanvasTexture(circleCanvas);
+
+    // 3. 波打つパーティクル群の構築
+    const colCount = 60;
+    const rowCount = 60;
+    const particleCount = colCount * rowCount;
+    const geometry = new THREE.BufferGeometry();
+    const positions = new Float32Array(particleCount * 3);
+    const colorsArr = new Float32Array(particleCount * 3);
+
+    // HPのテーマカラー（インディゴ、フューシャ、ピンクにパステル系をブレンド）
+    const palette = [
+      new THREE.Color('#818cf8'), // indigo-400
+      new THREE.Color('#e879f9'), // fuchsia-400
+      new THREE.Color('#f472b6'), // pink-400
+      new THREE.Color('#a78bfa'), // violet-400
+      new THREE.Color('#38bdf8'), // sky-400
+    ];
+
+    const dist = 3.5; // パーティクル間の距離
+    
+    let i = 0;
+    for (let ix = 0; ix < colCount; ix++) {
+      for (let iy = 0; iy < rowCount; iy++) {
+        // x, z平面に配置して起伏を持たせる
+        const x = (ix - colCount / 2) * dist;
+        const z = (iy - rowCount / 2) * dist;
+        const y = 0;
+        
+        positions[i * 3] = x;
+        positions[i * 3 + 1] = y;
+        positions[i * 3 + 2] = z;
+
+        // カラーを空間にグラデーションブレンド
+        const ratio = (ix / colCount + iy / rowCount) / 2;
+        const baseColor = palette[Math.floor(Math.random() * palette.length)].clone();
+        baseColor.lerp(palette[0], ratio * 0.3); // 統一感を出すためにインディゴを少し混ぜる
+        
+        colorsArr[i * 3] = baseColor.r;
+        colorsArr[i * 3 + 1] = baseColor.g;
+        colorsArr[i * 3 + 2] = baseColor.b;
+
+        i++;
+      }
+    }
+
+    geometry.setAttribute('position', new THREE.BufferAttribute(positions, 3));
+    geometry.setAttribute('color', new THREE.BufferAttribute(colorsArr, 3));
+
+    const material = new THREE.PointsMaterial({
+      size: 3.5, // 存在感のある大きめなソフトパーティクル
+      map: texture,
+      vertexColors: true,
+      blending: THREE.NormalBlending, // 明るい背景で色がしっかり乗るように
+      depthWrite: false, // 前後の破綻を防ぐ
+      transparent: true,
+      opacity: 0.85
+    });
+
+    const particles = new THREE.Points(geometry, material);
+    scene.add(particles);
+
+    // 4. マウス操作による傾き（パララックス）
+    let mouseX = 0;
+    let mouseY = 0;
+    let targetX = 0;
+    let targetY = 0;
+    let windowHalfX = window.innerWidth / 2;
+    let windowHalfY = window.innerHeight / 2;
+
+    document.addEventListener('mousemove', (event) => {
+      mouseX = (event.clientX - windowHalfX) * 0.05;
+      mouseY = (event.clientY - windowHalfY) * 0.05;
+    });
+
+    // 5. リサイズ対応
+    window.addEventListener('resize', () => {
+      windowHalfX = window.innerWidth / 2;
+      windowHalfY = window.innerHeight / 2;
+      camera.aspect = window.innerWidth / window.innerHeight;
+      camera.updateProjectionMatrix();
+      renderer.setSize(window.innerWidth, window.innerHeight);
+    });
+
+    // 6. アニメーションループ（波と流動）
+    const clock = new THREE.Clock();
+
+    const animate = () => {
+      requestAnimationFrame(animate);
+
+      const time = clock.getElapsedTime();
+      const posArray = particles.geometry.attributes.position.array as Float32Array;
+      
+      let index = 0;
+      for (let ix = 0; ix < colCount; ix++) {
+        for (let iy = 0; iy < rowCount; iy++) {
+          
+          // 滑らかで複雑な高低差の波をSin/Cosで合成
+          const y = Math.sin((ix * 0.3) + time * 0.8) * 6 + 
+                    Math.cos((iy * 0.2) + time * 0.5) * 6 +
+                    Math.sin((ix * 0.1) + (iy * 0.1) + time) * 4;
+
+          posArray[index * 3 + 1] = y;
+          index++;
+        }
+      }
+      particles.geometry.attributes.position.needsUpdate = true;
+
+      // 空間全体のゆっくりした回転
+      particles.rotation.y = time * 0.05;
+      particles.rotation.z = Math.sin(time * 0.1) * 0.1;
+
+      // マウス移動に基づく滑らかなカメラ追従
+      targetX = mouseX;
+      targetY = mouseY;
+      camera.position.x += (targetX - camera.position.x) * 0.02;
+      camera.position.y += (-targetY + 40 - camera.position.y) * 0.02; // y=40を中心とする
+      camera.lookAt(scene.position);
+
+      renderer.render(scene, camera);
+    };
+
+    animate();
+  };
+
+  document.addEventListener('astro:page-load', initThreeBg);
+</script>

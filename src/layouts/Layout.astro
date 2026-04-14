@@ -1,5 +1,6 @@
 ---
 import { ClientRouter } from 'astro:transitions';
+import ThreeBackground from '../components/ThreeBackground.astro';
 import '../styles/global.css';
 
 interface Props {
@@ -43,12 +44,8 @@ const { title } = Astro.props;
   </head>
   <body class="min-h-screen flex flex-col font-sans text-slate-800 bg-[#F8FAFC] selection:bg-indigo-200 selection:text-indigo-900 overflow-x-hidden relative">
     
-    <!-- 共通の動的オーロラ背景 -->
-    <div class="fixed inset-0 z-0 overflow-hidden pointer-events-none">
-      <div class="absolute top-[-10%] left-[-10%] w-[50%] h-[50%] rounded-full bg-indigo-400/20 blur-[120px] animate-blob"></div>
-      <div class="absolute top-[20%] right-[-10%] w-[40%] h-[60%] rounded-full bg-fuchsia-400/20 blur-[120px] animate-blob animation-delay-2000"></div>
-      <div class="absolute bottom-[-20%] left-[20%] w-[60%] h-[50%] rounded-full bg-pink-400/20 blur-[120px] animate-blob animation-delay-4000"></div>
-    </div>
+    <!-- 共通の動的オーロラ背景（Three.js 3Dパーティクルウェーブ） -->
+    <ThreeBackground />
 
     <!-- コンポーネント用のプレースホルダ枠（Header） -->
     <slot name="header" />
